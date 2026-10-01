@@ -59,7 +59,11 @@ test("skill frontmatter is valid", () => {
 
 test("packed plugin holds the manifest at its root plus the skill", async () => {
   const files = unzip(await packPlugin());
-  assert.deepEqual(Object.keys(files).sort().slice(0, 2), [".claude-plugin/plugin.json", "skills/wave-by-vento/SKILL.md"]);
+  for (const name of [".claude-plugin/plugin.json", "skills/wave-by-vento/SKILL.md"]) assert.ok(name in files, name);
+  if (".mcp.json" in files) {
+    const url = JSON.parse(files[".mcp.json"]).mcpServers["wave-by-vento"].url;
+    assert.match(url, /^https:\/\/[^/]+\/mcp$/, "the plugin points at a public https connector");
+  }
   assert.equal(JSON.parse(files[".claude-plugin/plugin.json"]).name, "wave-by-vento");
   assert.match(files["skills/wave-by-vento/references/event.md"], /Corso Castelfidardo 22/);
   for (const day of ["2026-10-07", "2026-10-08", "2026-10-09"]) assert.match(files[`skills/wave-by-vento/references/program-${day}.md`], /\[s\d+\]/);

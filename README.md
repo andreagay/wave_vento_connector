@@ -14,7 +14,7 @@ Contiene due pezzi, utilizzabili insieme o separatamente:
 | Marketplace GitHub | Piani Pro, Max, Team, Enterprise | `andreagay/wave_vento_connector` |
 | File plugin | Stessi piani | [`dist/wave-by-vento.plugin`](https://github.com/andreagay/wave_vento_connector/raw/main/dist/wave-by-vento.plugin) |
 | Condivisione interna | Team ed Enterprise, se un Owner ha attivato la condivisione dei plugin | Carica il file plugin, poi Personalizza → Plugin → ⋯ → Condividi (crea un link per i colleghi) |
-| Connettore personalizzato | Tutti i piani, anche Free (1 connettore) | `https://<tuo-progetto>.vercel.app/mcp`, oppure la pagina `https://<tuo-progetto>.vercel.app/` che spiega i passaggi |
+| Connettore personalizzato | Tutti i piani, anche Free (1 connettore) | `https://wave-vento-connector.vercel.app/mcp`, oppure la pagina [wave-vento-connector.vercel.app](https://wave-vento-connector.vercel.app/) che spiega i passaggi |
 
 ## 1. Installare il plugin
 
@@ -35,10 +35,12 @@ In Claude Code:
 
 ## 2. Pubblicare il connettore (dati live)
 
-Su Vercel (gratis, nessuna configurazione):
+Il connettore è pubblicato su **https://wave-vento-connector.vercel.app/mcp** ed è già collegato al plugin (`plugins/wave-by-vento/.mcp.json`). Chi installa il plugin lo trova nella scheda Connettori del plugin.
+
+Per pubblicarne un'altra copia su Vercel (gratis, nessuna configurazione):
 
 1. Vai su [vercel.com/new](https://vercel.com/new) e importa il repository `andreagay/wave_vento_connector`.
-2. Clicca **Deploy**. Ottieni `https://<progetto>.vercel.app`: la pagina principale spiega come aggiungere il connettore, l'endpoint MCP è `https://<progetto>.vercel.app/mcp`.
+2. Clicca **Deploy**. Usa il dominio di produzione (`https://<progetto>.vercel.app`, in Settings → Domains): la pagina principale spiega come aggiungere il connettore, l'endpoint MCP è `/mcp`. Gli indirizzi dei singoli deploy (`<progetto>-<codice>-<team>.vercel.app`) sono protetti da Vercel Authentication e cambiano a ogni deploy, quindi Claude non può usarli.
 3. Collega il connettore al plugin, così chi installa il plugin lo trova già nella scheda Connettori:
 
    ```bash
@@ -48,13 +50,15 @@ Su Vercel (gratis, nessuna configurazione):
    git add -A && git commit -m "Collega il connettore al plugin" && git push
    ```
 
+`vercel.json` imposta `"framework": null`: senza, Vercel scambierebbe il progetto per un server Node e risponderebbe 500 a ogni richiesta. Per lo stesso motivo nessun file deve chiamarsi `server.js` (né in radice né in `src/`); un test lo controlla.
+
 Funziona anche su qualsiasi host Node 18+ (Render, Railway, Fly, Docker): `npm start` espone `/mcp`, `/health` e la pagina su `/` (porta da `PORT`, default 3000).
 
 ## 3. Aggiungere solo il connettore
 
-- **Pro e Max**: Personalizza → Connettori → **+** → Aggiungi connettore personalizzato, incolla l'URL `/mcp`. Nessuna autenticazione.
+- **Pro e Max**: Personalizza → Connettori → **+** → Aggiungi connettore personalizzato, incolla `https://wave-vento-connector.vercel.app/mcp`. Nessuna autenticazione.
 - **Team ed Enterprise**: un Owner va in Impostazioni organizzazione → Connettori → Aggiungi → Personalizzato → Web; poi ognuno clicca **Connetti** in Personalizza → Connettori.
-- **Claude Code**: `claude mcp add --transport http wave-by-vento https://<progetto>.vercel.app/mcp`
+- **Claude Code**: `claude mcp add --transport http wave-by-vento https://wave-vento-connector.vercel.app/mcp`
 - **Claude Desktop in locale** (senza deploy): dopo `npm install`, aggiungi alla configurazione MCP
 
   ```json
@@ -130,6 +134,6 @@ test/                             test (node --test)
 Unofficial Claude version of the Wave by Vento 2026 ChatGPT plugin (OGR Torino, 7-9 October 2026). It ships a **Claude plugin** (a skill with the full official program by day, all speakers and practical info checked against the official website; works in chat, Cowork and Claude Code without any server) and a **remote MCP connector** (live official agenda, Luma side events and official pages, with a saved snapshot as fallback) that deploys to Vercel as-is.
 
 - Install the plugin: Customize → Plugins → Add → Add marketplace → `andreagay/wave_vento_connector`, or upload `dist/wave-by-vento.plugin`. Claude Code: `/plugin marketplace add andreagay/wave_vento_connector`.
-- Deploy the connector: import the repo at [vercel.com/new](https://vercel.com/new); the endpoint is `https://<project>.vercel.app/mcp` and the root page explains how to add it (Customize → Connectors → + → Add custom connector, available on every plan).
-- Wire the connector into the plugin: `npm run build:plugin -- --mcp-url https://<project>.vercel.app/mcp`.
+- Connector: https://wave-vento-connector.vercel.app/mcp (already wired into the plugin); the root page explains how to add it (Customize → Connectors → + → Add custom connector, available on every plan). To deploy your own copy, import the repo at [vercel.com/new](https://vercel.com/new) and use the production domain: deployment-specific URLs are behind Vercel Authentication. `vercel.json` sets `"framework": null` so Vercel doesn't treat the project as a Node server.
+- Point the plugin at another connector: `npm run build:plugin -- --mcp-url https://<project>.vercel.app/mcp`.
 - Refresh the agenda snapshot with `npm run sync:agenda`, edit practical info in `data/event.json`, then `npm run build:plugin && npm test` (`npm run test:live` checks the real services).

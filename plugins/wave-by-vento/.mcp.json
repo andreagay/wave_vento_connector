@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wave-by-vento": {
+      "type": "http",
+      "url": "https://wave-vento-connector.vercel.app/mcp"
+    }
+  }
+}

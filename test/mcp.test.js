@@ -3,7 +3,7 @@ import { after, before, beforeEach, test } from "node:test";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { SNAPSHOT } from "../src/data.js";
-import { SERVER_INSTRUCTIONS, createServer } from "../src/server.js";
+import { SERVER_INSTRUCTIONS, createServer } from "../src/mcp-server.js";
 import { clearLiveCache } from "../src/util.js";
 import { BRELLA_FIXTURE, html, json } from "./fixtures.js";
 

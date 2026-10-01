@@ -1,7 +1,7 @@
 // Stateless Streamable HTTP handler shared by the Vercel function (api/mcp.js)
 // and the standalone Node server (src/serve.js).
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { createServer } from "./server.js";
+import { createServer } from "./mcp-server.js";
 
 const CORS_HEADERS = {
   "access-control-allow-origin": "*",
