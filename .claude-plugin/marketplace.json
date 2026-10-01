@@ -12,7 +12,7 @@
       "name": "wave-by-vento",
       "source": "./plugins/wave-by-vento",
       "description": "Unofficial guide to Wave by Vento 2026 (formerly Italian Tech Week): agenda, speakers, masterclasses, side events, passes and logistics at OGR Torino, 7-9 October 2026.",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": {
         "name": "Andrea Gay"
       },
