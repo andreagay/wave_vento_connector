@@ -1,0 +1,63 @@
+{
+  "last_verified": "2026-10-01",
+  "complete": false,
+  "note": "Only sessions confirmed by public sources are listed here. The full agenda (70+ talks, 45 masterclasses, live podcasts) is on wavebyvento.com/agenda and in the official app; times and rooms can change.",
+  "types": ["fireside", "talk", "panel", "masterclass", "live_podcast", "networking", "party"],
+  "sessions": [
+    {
+      "id": "amodei-elkann-fireside",
+      "title": "Fireside chat: Dario Amodei x John Elkann",
+      "type": "fireside",
+      "date": null,
+      "start": null,
+      "end": null,
+      "location": "OGR Torino (stage not yet published in public sources)",
+      "speakers": ["dario-amodei", "john-elkann"],
+      "description": "The headline conversation of Wave 2026 between Anthropic's CEO and the CEO & Chairman of Exor.",
+      "booking": "Included in every pass; check the official agenda or app for day, time and stage.",
+      "sources": ["intelligentcio", "economyup", "dealroom"]
+    },
+    {
+      "id": "masterclass-ai-in-smes",
+      "title": "AI in SMEs: Three Impacts No One Saw Coming",
+      "type": "masterclass",
+      "date": "2026-10-08",
+      "start": "09:30",
+      "end": "10:15",
+      "location": "OGR Torino, masterclass studio",
+      "speakers": ["yuri-mariotti"],
+      "description": "Masterclass promoted by the Camera di commercio di Torino on the unexpected impacts of AI on small and medium-sized enterprises.",
+      "booking": "Reserve a seat in the official app (limited seats).",
+      "sources": ["camcom-masterclass"]
+    },
+    {
+      "id": "vcunder35-networking",
+      "title": "VCunder35: networking for young VCs",
+      "type": "networking",
+      "date": "2026-10-07",
+      "start": "18:00",
+      "end": "20:00",
+      "location": "OGR Torino, Refectory",
+      "speakers": [],
+      "organizers": ["Growth Capital", "OGR Torino", "Ring Capital"],
+      "description": "Exclusive networking event bringing together young investors from the international VC community.",
+      "booking": "Exclusive event for young VCs: check eligibility and registration with the organisers.",
+      "sources": ["ogr-events"]
+    },
+    {
+      "id": "wav-closing-party",
+      "title": ".WAV: official closing party",
+      "type": "party",
+      "date": "2026-10-09",
+      "start": "22:00",
+      "end": null,
+      "location": "OGR Torino, Corso Castelfidardo 22",
+      "speakers": [],
+      "lineup": ["Luce Clandestina (DJ set)", "Octavio Octavio (live)", "Pangaea B2B Impérieux (DJ set)"],
+      "description": "Electronic music, digital art and architecture to close Wave by Vento. Produced by Wave and Piano B, curated by Recall.",
+      "booking": "Free entry; tickets/registration on DICE.",
+      "url": "https://dice.fm/event/7d5kq9-wav-9th-oct-ogr-torino-torino-tickets",
+      "sources": ["dice-wav"]
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "last_verified": "2026-10-01",
+  "disclaimer": "Unofficial guide compiled from public sources. Not affiliated with Vento or Wave by Vento. Always double-check on the official website and app.",
+  "event": {
+    "name": "Wave by Vento 2026",
+    "formerly": "Italian Tech Week",
+    "organizer": "Vento (Vento Ventures), Italian early-stage venture fund",
+    "description": "One of Europe's leading tech conferences: a yearly gathering in Turin for founders, investors and tech leaders.",
+    "start_date": "2026-10-07",
+    "end_date": "2026-10-09",
+    "days": [
+      {
+        "date": "2026-10-07",
+        "weekday": "Wednesday"
+      },
+      {
+        "date": "2026-10-08",
+        "weekday": "Thursday"
+      },
+      {
+        "date": "2026-10-09",
+        "weekday": "Friday"
+      }
+    ],
+    "daily_hours": "09:00-18:00",
+    "timezone": "Europe/Rome",
+    "utc_offset": "CEST, UTC+2",
+    "contact_email": "wave@vento.ventures",
+    "sources": [
+      "wave-home",
+      "wave-faqs",
+      "wave-event-info",
+      "agenzianova"
+    ]
+  },
+  "numbers": {
+    "talks": "70+",
+    "masterclasses": "45",
+    "speakers": "200+",
+    "live_podcasts": "11+",
+    "side_events": "90+",
+    "investors": "1,500+",
+    "startups": "1,500+",
+    "expected_attendees": "15,000+",
+    "sources": [
+      "ogr-event",
+      "albaniatech",
+      "dealroom",
+      "wave-home"
+    ]
+  },
+  "venue": {
+    "name": "OGR Torino (Officine Grandi Riparazioni)",
+    "address": "Corso Castelfidardo 22, 10128 Torino, Italy",
+    "description": "Late-19th-century former railway workshops turned into a cultural and innovation hub.",
+    "event_area": "The event space is entirely on the ground floor, from the OGR Cult wing to the outdoor area and the Snodo bar.",
+    "sources": [
+      "wave-faqs",
+      "ogr-info",
+      "dice-wav"
+    ]
+  },
+  "stages": {
+    "items": [
+      {
+        "name": "Fucine Stage",
+        "notes": "Main stage, 1,000+ seats."
+      },
+      {
+        "name": "Binario 3 Stage",
+        "notes": "Deeper conversations and panel discussions."
+      },
+      {
+        "name": "Masterclass studios",
+        "notes": "Educational sessions of 45-90 minutes, up to about 50 seats each. Seats must be reserved in the official app."
+      },
+      {
+        "name": "Live podcasts",
+        "notes": "11+ live podcast recordings with international tech voices. Bookable in the official app."
+      },
+      {
+        "name": "Tech Expo",
+        "notes": "Exhibition area included in every pass."
+      },
+      {
+        "name": "Investor lounge",
+        "notes": "Dedicated lounge for VCs, angels, family offices and corporate venture arms."
+      }
+    ],
+    "sources": [
+      "wave-passes",
+      "wave-event-info",
+      "wave-faqs"
+    ]
+  },
+  "getting_there": {
+    "metro": "Metro line M1, Vinzaglio stop: about 10 minutes on foot.",
+    "train": "Torino Porta Susa railway station: about 10 minutes on foot.",
+    "tram_bus": "Tram 9 and buses 12, 33, 58 and 68 stop at Inghilterra.",
+    "parking": [
+      "Parcheggio Nino Bixio, Via Nino Bixio 46",
+      "Parcheggio Palagiustizia, Corso Vittorio Emanuele II",
+      "Covered parking, Corso Stati Uniti 49"
+    ],
+    "sources": [
+      "ogr-info"
+    ]
+  },
+  "passes": {
+    "categories": [
+      {
+        "name": "General",
+        "for": "Anyone in tech."
+      },
+      {
+        "name": "Startup",
+        "for": "Founders and startup teams, from pre-seed to growth stage."
+      },
+      {
+        "name": "Investor",
+        "for": "VCs, angels, family offices, CVCs and operators. Includes the attending-startups database and the investor lounge."
+      },
+      {
+        "name": "VIP",
+        "for": "Premium, exclusive experience."
+      }
+    ],
+    "included_in_every_pass": "3-day access, all sessions on both stages, masterclasses (seat booking in the app), live podcasts, the Tech Expo and all common areas.",
+    "free_access": "Students and accredited press (journalists covering technology and innovation; request via the press form) get free passes.",
+    "discounts": [
+      "Group discounts from 5+ passes.",
+      "15% discount for members of the Piedmont innovation hubs (Poli di Innovazione).",
+      "Camera di commercio di Torino: 15% discount for up to 70 companies from the Turin area."
+    ],
+    "pricing_note": "2026 is the first edition with paid passes. Early-bird prices ended on 31 August 2026: check current prices on the official pass page.",
+    "sources": [
+      "wave-passes",
+      "wave-pass-faq",
+      "wave-faqs",
+      "piemonteinnova",
+      "camcom-masterclass",
+      "dealroom"
+    ]
+  },
+  "access": {
+    "entry": "Bring the pass QR code from My Area (linked in the purchase confirmation email; it can be saved to your phone wallet) and an identity document, which is checked at the entrance.",
+    "badge": "Print your badge with the same QR code at the dedicated kiosks at OGR Torino, from a few days before the event and during the event days. Exact days and times are sent by email.",
+    "sources": [
+      "wave-faqs"
+    ]
+  },
+  "official_app": {
+    "name": "Wave by Vento (built on Brella)",
+    "availability": "App Store and Google Play. Reserved to passholders.",
+    "features": [
+      "Full agenda (published in September)",
+      "Profile and AI-powered matchmaking with other attendees",
+      "Scheduling one-to-one networking meetings",
+      "Booking masterclasses (limited seats) and live podcasts"
+    ],
+    "sources": [
+      "wave-faqs",
+      "brella-android"
+    ]
+  },
+  "on_site": {
+    "accessibility": "Fully accessible: everything is on the ground floor, with step-free entrances, elevators and accessible restrooms.",
+    "food": "Indoor bar and buffet restaurant, plus street-food trucks in the outdoor courtyard. Gluten-free, vegan and vegetarian options available.",
+    "cloakroom": "Cloakroom for coats and small items at the entrance of Binario 3.",
+    "luggage": "Trolleys and large bags can be left in the storage rooms at Fondazione Time2, just across the street from OGR (08:30-20:00).",
+    "sources": [
+      "wave-faqs",
+      "wave-event-info"
+    ]
+  },
+  "side_events": {
+    "summary": "90+ off-site events organised independently by tech communities across Turin during Wave week.",
+    "calendar_url": "https://luma.com/wave2026sideevents",
+    "luma_slug": "wave2026sideevents",
+    "pass_required": false,
+    "registration": "Register on each event's Luma page. Some side events require the organiser's approval.",
+    "hosting": "To host a side event, submit it through the Luma calendar or write to wave@vento.ventures.",
+    "sources": [
+      "luma-side-events",
+      "wave-faqs"
+    ]
+  },
+  "closing_party": {
+    "name": ".WAV",
+    "summary": "Official closing party of Wave by Vento: electronic music, digital art and architecture at OGR Torino.",
+    "date": "2026-10-09",
+    "start": "22:00",
+    "location": "OGR Torino, Corso Castelfidardo 22",
+    "lineup": [
+      "Luce Clandestina (DJ set)",
+      "Octavio Octavio (live)",
+      "Pangaea B2B Impérieux (DJ set)"
+    ],
+    "producers": "Produced by Wave and Piano B, curated by Recall (Turin electronic-music collective).",
+    "entry": "Free entry; tickets/registration on DICE.",
+    "tickets_url": "https://dice.fm/event/7d5kq9-wav-9th-oct-ogr-torino-torino-tickets",
+    "sources": [
+      "dice-wav",
+      "wave-faqs"
+    ]
+  },
+  "links": {
+    "website": "https://wavebyvento.com/",
+    "agenda": "https://wavebyvento.com/agenda",
+    "faqs": "https://wavebyvento.com/faqs",
+    "event_info": "https://wavebyvento.com/event-info",
+    "passes": "https://get.wavebyvento.com/pass",
+    "pass_faq": "https://wavebyvento.com/faq-pass",
+    "enjoy_turin": "https://wavebyvento.com/enjoy-turin",
+    "side_events": "https://luma.com/wave2026sideevents",
+    "app_android": "https://play.google.com/store/apps/details?id=com.brella.wavebyvento",
+    "closing_party_tickets": "https://dice.fm/event/7d5kq9-wav-9th-oct-ogr-torino-torino-tickets",
+    "venue_info": "https://ogrtorino.it/info-hour"
+  },
+  "sources": [
+    {
+      "id": "wave-home",
+      "title": "Wave by Vento - official website",
+      "url": "https://wavebyvento.com/"
+    },
+    {
+      "id": "wave-faqs",
+      "title": "Wave by Vento - FAQs",
+      "url": "https://wavebyvento.com/faqs"
+    },
+    {
+      "id": "wave-event-info",
+      "title": "Wave by Vento - Event info",
+      "url": "https://wavebyvento.com/event-info"
+    },
+    {
+      "id": "wave-agenda",
+      "title": "Wave by Vento - Agenda",
+      "url": "https://wavebyvento.com/agenda"
+    },
+    {
+      "id": "wave-passes",
+      "title": "Get your Wave pass",
+      "url": "https://get.wavebyvento.com/pass"
+    },
+    {
+      "id": "wave-pass-faq",
+      "title": "Wave by Vento - Pass FAQ",
+      "url": "https://wavebyvento.com/faq-pass"
+    },
+    {
+      "id": "wave-enjoy-turin",
+      "title": "Wave by Vento - Enjoy Turin",
+      "url": "https://wavebyvento.com/enjoy-turin"
+    },
+    {
+      "id": "ogr-event",
+      "title": "OGR Torino - Wave by Vento 2026",
+      "url": "https://ogrtorino.it/events/wave-by-vento-2026"
+    },
+    {
+      "id": "ogr-events",
+      "title": "OGR Torino - Events",
+      "url": "https://ogrtorino.it/en/events"
+    },
+    {
+      "id": "ogr-info",
+      "title": "OGR Torino - Info & hours / how to get there",
+      "url": "https://ogrtorino.it/info-hour"
+    },
+    {
+      "id": "luma-side-events",
+      "title": "Wave by Vento 2026 - Side Events (Luma)",
+      "url": "https://luma.com/wave2026sideevents"
+    },
+    {
+      "id": "brella-android",
+      "title": "Wave by Vento app (Google Play)",
+      "url": "https://play.google.com/store/apps/details?id=com.brella.wavebyvento"
+    },
+    {
+      "id": "dice-wav",
+      "title": ".WAV - closing party tickets (DICE)",
+      "url": "https://dice.fm/event/7d5kq9-wav-9th-oct-ogr-torino-torino-tickets"
+    },
+    {
+      "id": "camcom-masterclass",
+      "title": "Camera di commercio di Torino - Wave 2026 masterclass, 8 October",
+      "url": "https://www.to.camcom.it/Wave-2026-Masterclass-8-ottobre"
+    },
+    {
+      "id": "piemonteinnova",
+      "title": "Piemonte Innova - 15% discount for Poli di Innovazione members",
+      "url": "https://piemonteinnova.it/wave-by-vento-2026-sconto-poli-innovazione-piemonte/"
+    },
+    {
+      "id": "intelligentcio",
+      "title": "Intelligent CIO - Wave by Vento unveils new identity as Dario Amodei headlines 2026 edition",
+      "url": "https://www.intelligentcio.com/eu/2026/02/24/wave-by-vento-unveils-new-identity-as-dario-amodei-headlines-2026-edition/"
+    },
+    {
+      "id": "albaniatech",
+      "title": "AlbaniaTech - Italian Tech Week becomes Wave by Vento",
+      "url": "https://albaniatech.org/italian-tech-week-becomes-wave-by-vento-unveils-bold-new-identity-and-dario-amodei-headlining-landmark-2026-edition/"
+    },
+    {
+      "id": "economyup",
+      "title": "EconomyUp - Italian Tech Week diventa Wave by Vento",
+      "url": "https://www.economyup.it/innovazione/italian-tech-week-diventa-wave-by-vento-ospitera-dario-amodei-di-anthropic/"
+    },
+    {
+      "id": "agenzianova",
+      "title": "Agenzia Nova - Italian Tech Week becomes Wave by Vento",
+      "url": "https://www.agenzianova.com/en/news/torino-italian-tech-week-diventa-wave-by-vento-edizione-2026-dal-7-al-9-ottobre/"
+    },
+    {
+      "id": "dealroom",
+      "title": "Dealroom - Italian Tech Week / Wave by Vento 2026",
+      "url": "https://dealroom.co/events/italian-tech-week-2026/"
+    }
+  ]
+}
