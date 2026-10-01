@@ -1,0 +1,249 @@
+<!-- Generated from data/*.json by scripts/build-plugin.mjs: edit the data, not this file. -->
+
+# Wave by Vento 2026: speakers
+All 242 speakers in the official agenda snapshot taken 2026-10-01T12:54:10.158Z, with their sessions (session ids match the program files).
+
+- **Ace G. Spagni**: CEO & AI Strategist, Cuadro Srl / Hawkings Srl. Sessions: Thu 8 Oct 15:00 Room B, "Boost your business. Build your internal tools with AI, without writing code" [s977753].
+- **Adam Jonas**: Global Embodied AI/Robotics Strategist, Morgan Stanley. Sessions: Fri 9 Oct 11:26 Fucine, "Tech for Humans" (moderator) [s1023310].
+- **Aiden Blake**: Anthropic. Sessions: Thu 8 Oct 16:26 Fucine, "The Power of Proximity" [s1023502].
+- **Aleksandr Konotopskyi**: Founder and Chairman of the Supervisory Board, Ajax Systems. Sessions: Wed 7 Oct 15:48 Fucine, "Proof From Elsewhere" [s958706].
+- **Alessandra Cimadom**: Direttore Generale del Comune, Comune di Torino. Sessions: Fri 9 Oct 10:30 Room B, "From Industrial Cities to Sustainable Urban Futures: planning, governance and participation for urban transformation" [s1038962].
+- **Alessandro Scortecci**: Chief Investment Officer – Direct Investments, CDP Venture Capital SGR. Sessions: Thu 8 Oct 15:40 Binario 3, "From Italian capital to European scale" [s1039534].
+- **Alessandro Tommasi**: CEO - Founder, Future Proof Society. Sessions: Wed 7 Oct 14:00 Room C, "Better" (moderator) [s1039675].
+- **Alessia Intonti**: Legal Engineer Lead, Lexroom.ai. Sessions: Fri 9 Oct 15:00 Room C, "Inside the Machine: how LLMs actually work, and how to deploy them in legal practice" [s1007590].
+- **Alex Kendall**: CEO, Wayve. Sessions: Fri 9 Oct 11:26 Fucine, "Tech for Humans" [s1023310].
+- **Alex Presani**: Head of Technology & R&D, AgorAI. Sessions: Thu 8 Oct 10:30 Room A, "AI is Dead. Long Live AI! Designing the next generation of human-centric AI" [s1009323].
+- **Alex Schmitt**: Partner, Lightspeed Venture Partners. Sessions: Thu 8 Oct 14:58 Fucine, "Where Europe's Next Founders Come From" [s966698].
+- **Alexandre Momeni**: Partner, General Catalyst. Sessions: Thu 8 Oct 11:04 Fucine, "From Minds to Matter" [s959831].
+- **Amato Della Vecchia**: Chief Digital Officer, Poste Italiane. Sessions: Fri 9 Oct 10:30 Room A, "From Legacy to Leverage: how to orchestrate the largest multi-business AI platforms through a human+machine approach" [s1039103].
+- **Anas Biad**: Partner, Sequoia. Sessions: Thu 8 Oct 15:20 Fucine, "European Capital, Global Bets" [s969358]; Thu 8 Oct 16:04 Fucine, "The Category Makers" [s1037702].
+- **Andrea Bonabello**: General Partner, NVM Ventures. Sessions: Thu 8 Oct 11:15 Binario 3, "Innovation at industrial scale" [s1021187].
+- **Andrea Cunegatti**: Senior Solution Architect, Nebius. Sessions: Fri 9 Oct 10:30 Room C, "Engineering production agents: the model is the easy part" [s1039165].
+- **Andrea Gennarini**: Co-founder & Managing Partner, 2100. Sessions: Fri 9 Oct 15:39 Fucine, "Algorithm vs Instinct" (moderator) [s973240].
+- **Andrea Marino**: Co-founder and CEO, Nova Talent. Sessions: Fri 9 Oct 16:00 Room B, "Decoding Top Talent: a hands-on workshop on career preference data and AI-powered hiring" [s980718].
+- **Andrea Zorzetto**: CEO & Co-founder, Cato. Sessions: Fri 9 Oct 15:12 Fucine, "Vento: 200+ Bets on Italian Founders" [s958709].
+- **Andreas Klinger**: Founder & Investor, PROTOTYPE. Sessions: Wed 7 Oct 17:00 Room C, "Marcello Ascani Podcast" [s1034494]; Thu 8 Oct 12:48 Fucine, "How to Reindustrialize Europe in 10 Minutes or Less" [s1038889].
+- **Andrey Khusid**: CEO & Co-Founder, Miro. Sessions: Wed 7 Oct 15:26 Fucine, "Thinking Together in the Age of AI" [s930762].
+- **Andrii Degeler**. Sessions: Fri 9 Oct 10:30 Binario 3, "Reading the map: where Italian venture stands in Europe" [s1040323].
+- **Anish Acharya**: Partner, a16z. Sessions: Wed 7 Oct 11:30 Room C, "The a16z Show" (moderator) [s1007584]; Thu 8 Oct 09:58 Fucine, "The Most Human Technology Ever Made" [s1022797].
+- **Anna Dolganov**: Roman Historian and Papyrologist, Austrian Academy of Sciences. Sessions: Fri 9 Oct 11:15 Binario 3, "From ancient greek to oncology: the case for specialized AI" [s1023628].
+- **Anna Huyghues Despointes**: Co-Founder, Stealth AI x Bio. Sessions: Fri 9 Oct 14:58 Fucine, "Biology's Missing Data" [s1001207].
+- **Anna Nozza**: Chief People & Organization Officer Country Italia, Generali Italia. Sessions: Wed 7 Oct 14:45 Binario 3, "Reinventing work in the age of AI" [s1021280].
+- **Annarosa Farina**: Chief Information Officer & Chief Data Officer, Istituto Europeo di Oncologia , IEO. Sessions: Fri 9 Oct 11:15 Binario 3, "From ancient greek to oncology: the case for specialized AI" [s1023628].
+- **Anne Osdoit**: CEO, Moon Surgical. Sessions: Thu 8 Oct 14:44 Fucine, "Building Deep Tech in Europe" [s966697].
+- **Antonio Filosa**: CEO, Stellantis. Sessions: Fri 9 Oct 11:26 Fucine, "Tech for Humans" [s1023310].
+- **Antonio Tavera**: CEO, Focoos AI. Sessions: Fri 9 Oct 09:30 Room C, "Vision-Language Models actually work. just not the way you think" [s1007589].
+- **Benedetta di Robilant**: Co-founder and CEO, ProMIND Therapeutics. Sessions: Thu 8 Oct 11:40 Binario 3, "The business of longevity" [s1017687].
+- **Beniamino Pagliaro**: Editor, La Repubblica. Sessions: Wed 7 Oct 14:45 Binario 3, "Reinventing work in the age of AI" (moderator) [s1021280]; Thu 8 Oct 14:50 Binario 3, "The line AI can't cross" (moderator) [s1021279].
+- **Bianca Bonetti**: Founder, Sisters Founders. Sessions: Wed 7 Oct 11:05 Binario 3, "Fuel for life: food, wellbeing and the case for innovation" (moderator) [s1021112]; Wed 7 Oct 15:15 Binario 3, "Open Innovation, start to finish" (moderator) [s1034950]; Wed 7 Oct 15:45 Binario 3, "€250 billion reasons: why Europe can't afford to overlook women entrepreneurs" [s1039536]; Thu 8 Oct 11:40 Binario 3, "The business of longevity" (moderator) [s1017687]; Fri 9 Oct 11:15 Binario 3, "From ancient greek to oncology: the case for specialized AI" (moderator) [s1023628].
+- **Bryan Kim**: Founding Partner, Mido Capital. Sessions: Thu 8 Oct 16:48 Fucine, "Where Conviction Goes" [s969357].
+- **Calin Fabri**: Founder and Managing Director, Venture Europe. Sessions: Thu 8 Oct 09:36 Fucine, "The Race to Build Intelligence" (moderator) [s959828]; Thu 8 Oct 12:30 Room C, "Venture Europe" (moderator) [s1011437].
+- **Camilla Folladori**: Chief Strategy Officer, Flutter SEA. Sessions: Wed 7 Oct 15:15 Binario 3, "Open Innovation, start to finish" [s1034950].
+- **Carolin Roth**: CNBC. Sessions: Wed 7 Oct 16:25 Fucine, "The Rails Nobody Else Would Build" (moderator) [s1020186]; Thu 8 Oct 15:42 Fucine, "The Model Europe Built" (moderator) [s1038524].
+- **Carolina Chiappero**: Innovation Manager, Juventus Football Club. Sessions: Fri 9 Oct 14:00 Binario 3, "Beyond the pilot: how Juventus makes startup innovation compound" [s1038145].
+- **Ceri Morgan**: His Majesty's Trade Commissioner for Europe, UK Department for Innovation, Business, Science and Trade. Sessions: Thu 8 Oct 12:30 Room B, "Connecting Ecosystems: the UK’s role in powering international innovation" [s1009404].
+- **Charlie Perreau**: Head of Tech-Medias-Startup section, Les Echos. Sessions: Wed 7 Oct 14:00 Binario 3, "Tech meets beauty: a conversation with Guive Balooch" (moderator) [s1023782]; Wed 7 Oct 15:26 Fucine, "Thinking Together in the Age of AI" (moderator) [s930762]; Thu 8 Oct 14:00 Binario 3, "Soil: where biology, technology, and productivity converge" (moderator) [s1036292]; Thu 8 Oct 16:26 Fucine, "The Power of Proximity" (moderator) [s1023502].
+- **Charlotte Jee**: News editor, MIT Technology Review. Sessions: Wed 7 Oct 11:13 Fucine, "Rewriting the Rules: From the Open Web to the Age of AI" (moderator) [s951891]; Thu 8 Oct 09:14 Fucine, "When Anyone Can Build: The Agentic Software Revolution" (moderator) [s930765]; Thu 8 Oct 10:42 Fucine, "The Software Factory" (moderator) [s959827].
+- **Chris Bischoff**: Managing Director & COO, General Catalyst. Sessions: Wed 7 Oct 17:31 Fucine, "The Hardest Problem to Build For" [s976411].
+- **Chris Caldwell**: President & CEO, Concentrix. Sessions: Thu 8 Oct 14:30 Binario 3, "CEO interview: how companies avoid losing the trillion-dollar AI bet" [s1021277].
+- **Chris Kindt**: Partner & Head of Value Creation, Hg. Sessions: Thu 8 Oct 15:00 Room A, "From AI Theatre to P&L Impact: how to rewire software business models AI-first" [s1000822].
+- **Clarissa Zanda**: Senior Account Executive, Nova Talent. Sessions: Fri 9 Oct 16:00 Room B, "Decoding Top Talent: a hands-on workshop on career preference data and AI-powered hiring" [s980718].
+- **Claudio Delli Bovi**: Tech Lead - AI & Search, Lexroom.ai. Sessions: Fri 9 Oct 15:00 Room C, "Inside the Machine: how LLMs actually work, and how to deploy them in legal practice" [s1007590].
+- **Claudio Stamile**: Manager of AI R&D & Market Solutions, Fastweb+Vodafone. Sessions: Wed 7 Oct 11:30 Room B, "One Agent per Person: lessons from building OpenClaw at scale" [s977754].
+- **Daniela Minuti**: Founder, Genio media. Sessions: Fri 9 Oct 15:00 Room A, "From Personal Branding to Thought Leadership: how to build your presence on LinkedIn" [s977840].
+- **Daniele Lepido**: Senior Reporter, Bloomberg News. Sessions: Thu 8 Oct 14:30 Binario 3, "CEO interview: how companies avoid losing the trillion-dollar AI bet" (moderator) [s1021277].
+- **Dario Leopoldo Omero Calogero**: CEO, Maya Investments LTD. Sessions: Wed 7 Oct 15:45 Binario 3, "€250 billion reasons: why Europe can't afford to overlook women entrepreneurs" [s1039536].
+- **Dave Pattman**: VP Transformation Growth, EMEA, Concentrix. Sessions: Thu 8 Oct 11:30 Room A, "Evolution or Revolution? Why AI Advantage belongs to leaders who move smart" [s1003233].
+- **David Cis**: Group Chief Operating officer, Assicurazioni Generali. Sessions: Wed 7 Oct 10:45 Binario 3, "Beyond the algorithm: making the difference in AI adoption" [s1021113].
+- **Davide Canavesio**: CEO, OGR. Sessions: Wed 7 Oct 10:10 Fucine, "Built to Connect" [s1022537].
+- **Davide Dattoli**: Founder, Talent Garden. Sessions: Wed 7 Oct 14:45 Binario 3, "Reinventing work in the age of AI" [s1021280]; Wed 7 Oct 15:15 Binario 3, "Open Innovation, start to finish" [s1034950].
+- **Davide Tinelli**: Chief Operating Officer, Italy, Concentrix. Sessions: Thu 8 Oct 11:30 Room A, "Evolution or Revolution? Why AI Advantage belongs to leaders who move smart" [s1003233].
+- **Diego Piacentini**: Advisor, Vento. Sessions: Wed 7 Oct 14:27 Fucine, "Steve Jobs, the Untold Chapter" [s958702]; Wed 7 Oct 14:59 Fucine, "Inside the Making of DoorDash" (moderator) [s958703]; Wed 7 Oct 15:48 Fucine, "Proof From Elsewhere" [s958706]; Fri 9 Oct 15:12 Fucine, "Vento: 200+ Bets on Italian Founders" [s958709].
+- **Diletta Livi**: Partner, Alkemia Capital. Sessions: Thu 8 Oct 11:15 Binario 3, "Innovation at industrial scale" (moderator) [s1021187].
+- **Dinika Mahtani**: Partner, Cherry Ventures. Sessions: Fri 9 Oct 15:39 Fucine, "Algorithm vs Instinct" [s973240].
+- **Diyala D'Aveni**: CEO, Vento. Sessions: Wed 7 Oct 10:00 Fucine, "Opening" [s1022945]; Wed 7 Oct 11:30 Binario 3, "The ecosystem builders: two women leading the way" [s1021114].
+- **Donatella Sciuto**: Rector, Università Politecnico di Milano. Sessions: Wed 7 Oct 11:30 Binario 3, "The ecosystem builders: two women leading the way" [s1021114].
+- **Dorothy Chou**: Strategic Advisor, Google DeepMind. Sessions: Wed 7 Oct 14:00 Fucine, "When the Machine Reads the Game" [s958701]; Wed 7 Oct 16:00 Room C, "Now What?" [s1011436].
+- **Elin Flyger**: CEO, Tinental srl. Sessions: Wed 7 Oct 16:00 Room A, "Internationalizing innovation: scaling globally to capture foreign market opportunities" [s1030803].
+- **Elisa Seghetti**: CEO & Co-Founder, Saturn Dynamics Inc.. Sessions: Fri 9 Oct 14:00 Room A, "Teaching Robots to Work: World Models and Adaptive Robotics for Manufacturing" [s1034496].
+- **Emanuele Levi**: CEO, CDP Venture Capital. Sessions: Fri 9 Oct 10:30 Binario 3, "Reading the map: where Italian venture stands in Europe" [s1040323].
+- **Emanuele Veratti**: Senior Partner, Bain & Company. Sessions: Wed 7 Oct 10:00 Binario 3, "SCENARIO: Future-ready? The cost of hesitation in the AI-native era" [s1021111].
+- **Eoin Hinchy**: Co-founder & CEO, Tines. Sessions: Thu 8 Oct 17:15 Fucine, "Automating the Unglamorous" [s969359].
+- **Fabio Cermelli**: CTO, Focoos AI. Sessions: Fri 9 Oct 09:30 Room C, "Vision-Language Models actually work. just not the way you think" [s1007589].
+- **Fabio Mondini de Focatiis**: Founding Partner, Growth Capital. Sessions: Thu 8 Oct 10:00 Binario 3, "SCENARIO: Where the money is going. The state of European VC and why Italy matters now." [s1021620].
+- **Fabio Senesi**: Head R&D, Rete Ferroviaria Italiana. Sessions: Wed 7 Oct 14:00 Room B, "Designing mobility at scale: building next-gen infrastructure through R&D" [s1034495].
+- **Fabrizio Rosina**: RedCarbon. Sessions: Fri 9 Oct 09:30 Room B, "Everyone talks about AI sovereignty. This masterclass is about how to build it in practice" [s1034880].
+- **Federico Biraghi**: CEO, RedCarbon. Sessions: Fri 9 Oct 09:30 Room B, "Everyone talks about AI sovereignty. This masterclass is about how to build it in practice" [s1034880].
+- **Federico Cuppoloni**: Director, Cleantech for Italy. Sessions: Fri 9 Oct 09:30 Room A, "Cleantech: bridging research, policy & capital for industrial scale" [s975687].
+- **Federico Ferrazza**: Editor in Chief, Italian Tech. Sessions: Wed 7 Oct 11:30 Binario 3, "The ecosystem builders: two women leading the way" (moderator) [s1021114]; Thu 8 Oct 10:55 Binario 3, "Physical AI: where artificial intelligence produces impact" (moderator) [s1035553]; Fri 9 Oct 10:55 Binario 3, "The role of telcos in building a sovereign digital ecosystem" (moderator) [s1039330]; Fri 9 Oct 14:14 Fucine, "The Long Game" (moderator) [s1038938].
+- **Federico Minutoli**: CEO, Atena Reply. Sessions: Fri 9 Oct 11:15 Binario 3, "From ancient greek to oncology: the case for specialized AI" [s1023628].
+- **Federico Moro**: Head of Venture Studio, e-Novia S.p.A.. Sessions: Thu 8 Oct 12:30 Room A, "Physical AI & Robotics: the next industrial revolution" [s979524].
+- **Federico Sargenti**: CEO & Co-Founder, CommerceClarity. Sessions: Thu 8 Oct 12:20 Binario 3, "The hybrid shopper and the rise of agentic commerce" [s1038931].
+- **Fernanda Ferreira**: Co-founder & CEO, Lindo. Sessions: Fri 9 Oct 15:12 Fucine, "Vento: 200+ Bets on Italian Founders" [s958709].
+- **Filippo Rizzante**: Chief Technology Officer, Reply. Sessions: Thu 8 Oct 10:30 Room B, "Beyond the US: what tech leaders actually gain from listing in Europe" [s972478]; Fri 9 Oct 10:58 Fucine, "Your Knowledge, Your Model" [s952274].
+- **Filippo Santelli**: Reporter, La Repubblica. Sessions: Wed 7 Oct 14:20 Binario 3, "From lab to term sheet: bridging research and venture capital in Europe." (moderator) [s1039535].
+- **Filippo Signoretti**: Head of Group Business Development & Strategy, Nexi. Sessions: Thu 8 Oct 12:20 Binario 3, "The hybrid shopper and the rise of agentic commerce" [s1038931].
+- **Flavio Proietti Pantosti**. Sessions: Thu 8 Oct 12:20 Binario 3, "The hybrid shopper and the rise of agentic commerce" (moderator) [s1038931]; Thu 8 Oct 15:40 Binario 3, "From Italian capital to European scale" (moderator) [s1039534].
+- **Flora Bell**: Managing Director, TPF Labs at The Players Fund. Sessions: Fri 9 Oct 14:00 Binario 3, "Beyond the pilot: how Juventus makes startup innovation compound" [s1038145].
+- **Floriano Masoero**: Presidente e Amministratore Delegato, Siemens S.p.A.. Sessions: Thu 8 Oct 10:55 Binario 3, "Physical AI: where artificial intelligence produces impact" [s1035553].
+- **Francesca Capella**: Research Fellow and Scientific Director of Open Innovation Lookout Observatory, Politecnico di Milano. Sessions: Wed 7 Oct 15:15 Binario 3, "Open Innovation, start to finish" [s1034950].
+- **Francesca Protano**: CNH Head of Technology Strategy, Product Innovation and Sustainability, CNH. Sessions: Thu 8 Oct 14:00 Binario 3, "Soil: where biology, technology, and productivity converge" [s1036292].
+- **Francesca Zadro**: Government official, Italian Trade Agency. Sessions: Wed 7 Oct 16:00 Room A, "Internationalizing innovation: scaling globally to capture foreign market opportunities" [s1030803].
+- **Francesco Cerruti**: General Director, Italian Tech Alliance. Sessions: Thu 8 Oct 10:00 Binario 3, "SCENARIO: Where the money is going. The state of European VC and why Italy matters now." [s1021620].
+- **Francesco Pappone**: CEO & Co-founder, Paradigma. Sessions: Fri 9 Oct 16:00 Room A, "Building the infrastructure for autonomous research" [s977841].
+- **Francesco Signorato**: Nebuly. Sessions: Fri 9 Oct 16:20 Fucine, "Seed to Scale" [s958708].
+- **Francesco Simoneschi**: CEo & Founder, TrueLayer. Sessions: Fri 9 Oct 16:20 Fucine, "Seed to Scale" [s958708].
+- **Francesco Williams Circosta**: Co-founder & CEO, Hawkings. Sessions: Thu 8 Oct 15:00 Room B, "Boost your business. Build your internal tools with AI, without writing code" [s977753].
+- **Francesco Zucchetta**: Chief Innovation Officer, Serenis. Sessions: Wed 7 Oct 11:30 Room A, "How to build a self-updating Knowledge Base: integrating code, AI, and business processes" [s1034493].
+- **Frederick Jensen**: CEO & Founder, Summ Ingredients. Sessions: Wed 7 Oct 17:00 Room A, "From Lab to Market: a practical guide to building innovative food startups within the MEAL program" [s1023247].
+- **Gabriel Guinea Montalvo**: Pillar. Sessions: Wed 7 Oct 12:30 Room C, "Vento Meets" [s1039674].
+- **Gaia Ferrero Regis**: CEO, Byzantine Finance. Sessions: Thu 8 Oct 17:00 Room B, "From Speculation to Infrastructure: how blockchain is entering the banking system" [s979462].
+- **Geoffrey Cain**: Author, Steve Jobs in Exile. Sessions: Wed 7 Oct 14:27 Fucine, "Steve Jobs, the Untold Chapter" [s958702].
+- **Giacomo Bertuzzi**: Senior Programmes Manager, Royal Academy of Engineering. Sessions: Wed 7 Oct 16:00 Room B, "Deep Tech does not scale on science alone: a support-system stress test" [s977838].
+- **Giacomo Ciarlini**: Co-founder & CIO, Datapizza. Sessions: Wed 7 Oct 12:30 Room A, "AI-Native by Design: stop adding AI and start redesigning processes from scratch" [s978721].
+- **Giacomo Luppi**: CEO & Co-founder of Chapeau Media, Chapeau Media. Sessions: Wed 7 Oct 10:15 Binario 3, "Made by AI: a conversation on advertising's next shift" (moderator) [s1035552]; Thu 8 Oct 15:00 Room C, "Chapeau Media" (moderator) [s1007588].
+- **Gianmarco Rallo**: Senior Manager, Bain & Company. Sessions: Thu 8 Oct 12:30 Room A, "Physical AI & Robotics: the next industrial revolution" [s979524].
+- **Gianmaria Monteleone**: Founder & CEO, Veliu. Sessions: Thu 8 Oct 12:20 Binario 3, "The hybrid shopper and the rise of agentic commerce" [s1038931].
+- **Giorgio Chiellini**: Chief Club Affairs Officer, Juventus FC. Sessions: Wed 7 Oct 14:00 Fucine, "When the Machine Reads the Game" [s958701]; Fri 9 Oct 14:00 Binario 3, "Beyond the pilot: how Juventus makes startup innovation compound" [s1038145].
+- **Giulia De Martini**: CEO, The FabLab. Sessions: Fri 9 Oct 16:00 Room C, "Tech innovation needs public engagement: how to design STEM initiatives for social and business impact" [s1011220].
+- **Giulio Michelon**: Podcast, Cosa Sposta. Sessions: Wed 7 Oct 10:30 Room C, "Cosa Sposta" (moderator) [s1039161].
+- **Giulio Starace**: Founder, Paradigma. Sessions: Fri 9 Oct 16:00 Room A, "Building the infrastructure for autonomous research" [s977841].
+- **Giuseppe Pecere**: Hisy Technologies. Sessions: Wed 7 Oct 10:30 Room C, "Cosa Sposta" [s1039161].
+- **Giuseppe Simone**: PhD Chief of Urology, Istituto Nazionale dei Tumori Regina Elena (IFO). Sessions: Thu 8 Oct 12:16 Fucine, "Inside the operating room of the future - from robots to data" [s1021188].
+- **Guglielmo Caviasso**: VP GLOBAL HEAD OF DIGITAL INTEGRATION AND VEHICLE VALIDATION, Stellantis. Sessions: Fri 9 Oct 15:00 Room B, "Simplification is Innovation: how digital engineering enables speed and smart synchronisation in complex product development" [s1038161].
+- **Guillaume Simonaire**: Partner, Founders Future. Sessions: Wed 7 Oct 14:00 Room A, "From Models to Production: exploring the Enterprise AI stack" [s979335].
+- **Guive Balooch**: Global Vice President, Technology and Open Innovation, L'Oréal Groupe. Sessions: Wed 7 Oct 14:00 Binario 3, "Tech meets beauty: a conversation with Guive Balooch" [s1023782].
+- **Ian King**: Presenter & Journalist, The Times. Sessions: Fri 9 Oct 09:30 Fucine, "Europe's Next Bet" (moderator) [s1024354]; Fri 9 Oct 10:14 Fucine, "The Whole Board" (moderator) [s1037469].
+- **Ignasi Costas**: Founder & Partner RCD. Head of Innovation & Entrepreneurship. General Secretary Tech Barcelona., RCD / Tech Barcelona. Sessions: Thu 8 Oct 09:30 Room B, "AI Governance: Legal Architecture - Building the legal frameworks companies need, and how Barcelona is becoming an AI Hub" [s1009403].
+- **Ileana Pirozzi**: Co-Founder & CEO, Stealth. Sessions: Fri 9 Oct 16:37 Fucine, "Embodied Intelligence for Human Infrastructure: From Autonomous Vehicles to Autonomous Surgery" [s1018543].
+- **Inès Makula**: Host, Made IT Podcast. Sessions: Thu 8 Oct 10:30 Room C, "Made IT" (moderator) [s1007585]; Fri 9 Oct 09:52 Fucine, "The European Advantage: Building Intelligence at Scale" (moderator) [s1023845].
+- **Irwan Bello**: CEO, Aire. Sessions: Thu 8 Oct 11:04 Fucine, "From Minds to Matter" [s959831].
+- **Jack Zhang**: Global CEO and Co-Founder, Airwallex. Sessions: Wed 7 Oct 16:25 Fucine, "The Rails Nobody Else Would Build" [s1020186].
+- **Jacopo Romei**: Entrepreneur, Scaling Tales. Sessions: Wed 7 Oct 10:30 Room A, "Tactical AI: how to save 15 minutes every hour" [s979463].
+- **Jake Stauch**: CEO, Serval. Sessions: Thu 8 Oct 15:20 Fucine, "European Capital, Global Bets" [s969358].
+- **James Anderson**: CIO, Lingotto Innovation. Sessions: Wed 7 Oct 16:47 Fucine, "The Other Side of the Story" [s1035216].
+- **James Cadwallader**: Co-Founder & CEO, Profound. Sessions: Thu 8 Oct 12:30 Room C, "Venture Europe" [s1011437]; Thu 8 Oct 16:04 Fucine, "The Category Makers" [s1037702].
+- **James Mitra**: Founder, JBM. Sessions: Thu 8 Oct 09:58 Fucine, "The Most Human Technology Ever Made" (moderator) [s1022797].
+- **James Peng**: CEO & Chairman, Pony.ai. Sessions: Thu 8 Oct 09:30 Room C, "Actually" [s1024111]; Thu 8 Oct 11:40 Fucine, "When AI Hits the Road" [s959829].
+- **James Wall**: Vice President Product Management and Medical Offer, Intuitive. Sessions: Thu 8 Oct 12:16 Fucine, "Inside the operating room of the future - from robots to data" [s1021188].
+- **Jean Christophe Laloux**: Director General - Head of EU Lending and Advisory, European Investment Bank. Sessions: Fri 9 Oct 09:30 Fucine, "Europe's Next Bet" [s1024354].
+- **Jeannette zu Fürstenberg**: President & Managing Director, General Catalyst. Sessions: Thu 8 Oct 14:17 Fucine, "The Compounding Bet" [s969360].
+- **Joe Schorge**: Founder and Managing Partner, Isomer Capital. Sessions: Wed 7 Oct 15:00 Room C, "Zero One Hundred Conferences - Impact Talks" [s1024112].
+- **Joe Tsai**: Co-Founder & Chairman, Alibaba Group. Sessions: Wed 7 Oct 16:47 Fucine, "The Other Side of the Story" [s1035216].
+- **Johannes Reck**: Co-Founder & CEO, GetYourGuide. Sessions: Wed 7 Oct 17:09 Fucine, "The Trip AI Can't Take" [s970430].
+- **John Elkann**: CEO & Chairman, Exor, Stellantis & Ferrari. Sessions: Wed 7 Oct 12:12 Fucine, "Designing the World We Live In" [s930763]; Fri 9 Oct 12:00 Fucine, "Global Champions, European Roots" [s1021536].
+- **Jonathan Godwin**: CEO, Orbital Industries. Sessions: Thu 8 Oct 11:04 Fucine, "From Minds to Matter" [s959831].
+- **Jony Ive**: Founder, LoveFrom. Sessions: Wed 7 Oct 12:12 Fucine, "Designing the World We Live In" [s930763].
+- **Judith Dada**: Co-CEO & Senior Partner, Langdock & Visionaries. Sessions: Thu 8 Oct 09:00 Fucine, "Europe's AI future: On Challenges, Sovereignty and Abundance" [s1022536].
+- **Julia Nasi**: Strategic Partnerships Advisor, Veevi. Sessions: Fri 9 Oct 14:00 Binario 3, "Beyond the pilot: how Juventus makes startup innovation compound" [s1038145].
+- **Julien Roux**: Co-Founder and CRO, Nebuly. Sessions: Thu 8 Oct 14:00 Room C, "Founded & Grounded" [s1007587].
+- **Kitty Mayo**: CEO, Project Europe. Sessions: Thu 8 Oct 14:58 Fucine, "Where Europe's Next Founders Come From" [s966698].
+- **Koen Berges**: CFO, Materialise. Sessions: Thu 8 Oct 10:30 Room B, "Beyond the US: what tech leaders actually gain from listing in Europe" [s972478].
+- **Leah Hodgson**: Deputy Editor, European Private Markets, Pitchbook. Sessions: Thu 8 Oct 16:48 Fucine, "Where Conviction Goes" (moderator) [s969357]; Thu 8 Oct 17:37 Fucine, "The Operating System of Growth" (moderator) [s966700].
+- **Liam Boyle**: Head of Data & Business Intelligence, BYOMA. Sessions: Thu 8 Oct 17:37 Fucine, "The Operating System of Growth" [s966700].
+- **Linda Rottenberg**: CEO, Endeavor. Sessions: Wed 7 Oct 15:48 Fucine, "Proof From Elsewhere" [s958706].
+- **Lorenzo Gangemi**: Chief Data Officer, Poste Italiane. Sessions: Fri 9 Oct 10:30 Room A, "From Legacy to Leverage: how to orchestrate the largest multi-business AI platforms through a human+machine approach" [s1039103].
+- **Luana Lara Lopes**: Co-Founder and COO, Kalshi. Sessions: Wed 7 Oct 10:46 Fucine, "How Prediction Markets Are Changing the Way We See the World" [s930760].
+- **Luca Bocchio**: General Partner, Balderton Capital. Sessions: Wed 7 Oct 14:20 Binario 3, "From lab to term sheet: bridging research and venture capital in Europe." [s1039535].
+- **Luca Caniparoli**: VP, Product, Prima Assicurazioni. Sessions: Wed 7 Oct 15:00 Room A, "Building the AI-Native Company: lessons, challenges, and real-world impact" [s975879].
+- **Luca De Angelis**: CEO, Tech Europe Foundation. Sessions: Wed 7 Oct 14:20 Binario 3, "From lab to term sheet: bridging research and venture capital in Europe." [s1039535].
+- **Luca Ferrari**: CEO and Co-Founder, Bending Spoons. Sessions: Wed 7 Oct 11:30 Room C, "The a16z Show" [s1007584]; Wed 7 Oct 15:48 Fucine, "Proof From Elsewhere" [s958706].
+- **Luca Miretti**: Vehicle Engineering AI Programs, Stellantis. Sessions: Fri 9 Oct 15:00 Room B, "Simplification is Innovation: how digital engineering enables speed and smart synchronisation in complex product development" [s1038161].
+- **Ludovico Russo**: VP of Engineering, RedCarbon. Sessions: Fri 9 Oct 09:30 Room B, "Everyone talks about AI sovereignty. This masterclass is about how to build it in practice" [s1034880].
+- **Luigi Sambuy**: Forward Deployed Engineer, ElevenLabs. Sessions: Wed 7 Oct 12:30 Room B, "Live Workshop: building omnichannel AI agents that sound natural" [s973370].
+- **Manny Medina**: Co-Founder and CEO, Paid. Sessions: Thu 8 Oct 10:20 Fucine, "The SaaSpocalypse" [s930766].
+- **Marcello Ascani**: CEO, Flatmates Agency. Sessions: Wed 7 Oct 10:46 Fucine, "How Prediction Markets Are Changing the Way We See the World" (moderator) [s930760]; Wed 7 Oct 11:55 Binario 3, "Startup pitch competition by Ascensore" [s1021115]; Wed 7 Oct 17:00 Room C, "Marcello Ascani Podcast" (moderator) [s1034494].
+- **Marcello Restelli**: Full Professor, Politecnico di MIlano. Sessions: Thu 8 Oct 14:50 Binario 3, "The line AI can't cross" [s1021279].
+- **Marco Argenti**: Goldman Sachs. Sessions: Fri 9 Oct 10:36 Fucine, "Mindset, Not Skillset" [s1036184].
+- **Marco Gay**: CEO, Zest. Sessions: Thu 8 Oct 10:30 Binario 3, "AI and industry: the value challenge" [s1021278].
+- **Marco Gilli**: President, Fondazione Compagnia di San Paolo. Sessions: Fri 9 Oct 14:14 Fucine, "The Long Game" [s1038938].
+- **Marco Molinaro**: Cybersecurity Lead for Italy and Greece, Accenture. Sessions: Wed 7 Oct 10:30 Room B, "The Sovereignty Stack: Cyber-resilience in the Age of Frontier AI" [s975880].
+- **Marco Pavone**: Associate Professor, Stanford University. Sessions: Thu 8 Oct 11:26 Fucine, "Embodied Intelligence: A New Era Begins" [s930764].
+- **Marco Santambrogio**: Full Professor, Politecnico di Milano. Sessions: Wed 7 Oct 16:00 Room A, "Internationalizing innovation: scaling globally to capture foreign market opportunities" [s1030803].
+- **Marell Evans**: Founder, General Partner, Exceptional Capital. Sessions: Thu 8 Oct 10:20 Fucine, "The SaaSpocalypse" [s930766].
+- **Markus Facklam**: Director Europe & Middle East, London & Partners. Sessions: Thu 8 Oct 12:30 Room B, "Connecting Ecosystems: the UK’s role in powering international innovation" [s1009404].
+- **Marta Casassa**: Innovation Lab Manager, Opening Future, a joint project by Google Cloud, Intesa Sanpaolo, and TIM Enterprise. Sessions: Thu 8 Oct 17:00 Room A, "Don't kill your deal: surviving the Deadly Sins of Fundraising" [s1000699].
+- **Martin Coulter**: News Editor, Sifted. Sessions: Thu 8 Oct 16:00 Room C, "Startup Europe - The Sifted Podcast" (moderator) [s1024113].
+- **Martìn Jerch**: Head of Department, Entrepreneurship and Investors, ICEX INVEST IN SPAIN. Sessions: Thu 8 Oct 11:30 Room B, "Scaling into Europe: 10 years of lessons from ICEX’s Rising Up in Spain program" [s972479].
+- **Martina Palmese**: Brand & Impact Advisor, Freelance. Sessions: Fri 9 Oct 14:00 Room B, "Infinite Intelligence, Finite Planet: the hidden cost of growth in the age of AI" [s1000698].
+- **Martina Traverso**: Manager of AI Products, Fastweb+Vodafone. Sessions: Wed 7 Oct 11:30 Room B, "One Agent per Person: lessons from building OpenClaw at scale" [s977754].
+- **Massimo Sabatini**: CEO & Co-Founder, Foreverland Food. Sessions: Wed 7 Oct 17:00 Room A, "From Lab to Market: a practical guide to building innovative food startups within the MEAL program" [s1023247].
+- **Matan Grinberg**: CEO & Co-Founder, Factory. Sessions: Thu 8 Oct 10:42 Fucine, "The Software Factory" [s959827].
+- **Mathieu Nebra**: Founder / Advisor, Scale Me Up. Sessions: Thu 8 Oct 16:00 Room B, "The end of the SaaS gold rush: what to sell when AI does everything?" [s979341].
+- **Matteo Luischi**: Chief Management Officer & UK Interim Country Manager, Prima Assicurazioni. Sessions: Thu 8 Oct 14:50 Binario 3, "The line AI can't cross" [s1021279].
+- **Matteo Villa**: Head of STEM engagement and communication, The FabLab. Sessions: Fri 9 Oct 16:00 Room C, "Tech innovation needs public engagement: how to design STEM initiatives for social and business impact" [s1011220].
+- **Mattia Garofalo**. Sessions: Wed 7 Oct 10:15 Binario 3, "Made by AI: a conversation on advertising's next shift" [s1035552].
+- **Mattia Montepara**: Co-Founder & CEO, Sibill S.r.l.. Sessions: Wed 7 Oct 17:00 Room B, "State of Accounting Tech 2026: where did we leave off?" [s977839].
+- **Mattia Voltaggio**: Head of Joule, Eni. Sessions: Wed 7 Oct 11:05 Binario 3, "Fuel for life: food, wellbeing and the case for innovation" [s1021112].
+- **Maurizio Forte**. Sessions: Thu 8 Oct 15:40 Binario 3, "From Italian capital to European scale" [s1039534].
+- **Max Junestrand**: Chief Executive Officer & Co-Founder, Legora. Sessions: Thu 8 Oct 14:17 Fucine, "The Compounding Bet" [s969360]; Thu 8 Oct 16:00 Room C, "Startup Europe - The Sifted Podcast" [s1024113].
+- **Merete Hverven**: CEO, Visma. Sessions: Fri 9 Oct 09:52 Fucine, "The European Advantage: Building Intelligence at Scale" [s1023845].
+- **Mia Ceran**: Journalist and Podcaster, Now What?. Sessions: Wed 7 Oct 16:00 Room C, "Now What?" (moderator) [s1011436].
+- **Michele Catasta**: President & Head of AI, Replit. Sessions: Thu 8 Oct 09:14 Fucine, "When Anyone Can Build: The Agentic Software Revolution" [s930765]; Thu 8 Oct 10:30 Room C, "Made IT" [s1007585].
+- **Michele Pierri**: Head of Creator Management & Editorial Team Italy, LinkedIn. Sessions: Fri 9 Oct 15:00 Room A, "From Personal Branding to Thought Leadership: how to build your presence on LinkedIn" [s977840].
+- **Mike Winkelmann**: BEEPLE, BEEPLE. Sessions: Wed 7 Oct 10:24 Fucine, "Art in the Age of Thinking Machines" [s930758].
+- **Miquel Martì**: CEO, Tech Barcelona. Sessions: Thu 8 Oct 09:30 Room B, "AI Governance: Legal Architecture - Building the legal frameworks companies need, and how Barcelona is becoming an AI Hub" [s1009403].
+- **Morgan Samet**: Managing Partner & Co Head, Lingotto. Sessions: Thu 8 Oct 11:04 Fucine, "From Minds to Matter" (moderator) [s959831]; Thu 8 Oct 11:40 Fucine, "When AI Hits the Road" (moderator) [s959829].
+- **Nazanin Daneshvar**: Partner, Angel Invest Fund. Sessions: Thu 8 Oct 16:48 Fucine, "Where Conviction Goes" [s969357].
+- **Niccolò Sanarico**: Partner & CTO, Primo Capital. Sessions: Thu 8 Oct 17:00 Room A, "Don't kill your deal: surviving the Deadly Sins of Fundraising" [s1000699].
+- **Nicoletta Crisponi**: BInnovation Designer, Sustainability expert - Faculty Talent Garden. Sessions: Fri 9 Oct 14:00 Room B, "Infinite Intelligence, Finite Planet: the hidden cost of growth in the age of AI" [s1000698].
+- **Nik Storonsky**: Founder and CEO, Revolut. Sessions: Fri 9 Oct 12:00 Fucine, "Global Champions, European Roots" [s1021536].
+- **Ollie Tiramuragan Collard**. Sessions: Thu 8 Oct 14:00 Room C, "Founded & Grounded" (moderator) [s1007587].
+- **Paddy Dillon**: Principal, Left Lane. Sessions: Fri 9 Oct 14:36 Fucine, "Winning Global Capital" [s973242].
+- **Paolo Cerioli**: Chief Innovation and Information Technology Officer, FINCANTIERI. Sessions: Thu 8 Oct 11:15 Binario 3, "Innovation at industrial scale" [s1021187].
+- **Paolo Fois**: Co-founder & CEO, Lexroom. Sessions: Thu 8 Oct 15:00 Room C, "Chapeau Media" [s1007588]; Fri 9 Oct 14:36 Fucine, "Winning Global Capital" [s973242].
+- **Paolo Pio**: Co-founder and General Partner, Exceptional Ventures. Sessions: Thu 8 Oct 11:40 Binario 3, "The business of longevity" [s1017687].
+- **Patrizia Celia**: Head of Large Caps & Investment Vehicles, Equity Primary Markets, Euronext. Sessions: Thu 8 Oct 10:30 Room B, "Beyond the US: what tech leaders actually gain from listing in Europe" [s972478].
+- **Petar Veličković**: Senior Staff Research Scientist, Google DeepMind. Sessions: Wed 7 Oct 14:00 Fucine, "When the Machine Reads the Game" [s958701].
+- **Philip Grasselli**: Canvassador & Instructor, Canva. Sessions: Fri 9 Oct 14:00 Room C, "Design, Brand & AI: making creativity accessible to everyone with Canva" [s1039102].
+- **Philipp Herzig**: Chief Technology Officer, SAP. Sessions: Thu 8 Oct 15:42 Fucine, "The Model Europe Built" [s1038524].
+- **Pier Luigi Pisa**: Journalist, La Repubblica. Sessions: Wed 7 Oct 10:45 Binario 3, "Beyond the algorithm: making the difference in AI adoption" (moderator) [s1021113]; Thu 8 Oct 10:30 Binario 3, "AI and industry: the value challenge" (moderator) [s1021278]; Thu 8 Oct 15:15 Binario 3, "Who trains the trains" (moderator) [s1036707].
+- **Pierandrea Morelli**: Senior AI Engineer, Serenis. Sessions: Wed 7 Oct 11:30 Room A, "How to build a self-updating Knowledge Base: integrating code, AI, and business processes" [s1034493].
+- **Pietro Bezza**: Co-Founder and Managing Partner, Connect Ventures. Sessions: Fri 9 Oct 15:39 Fucine, "Algorithm vs Instinct" [s973240].
+- **Rafal Modrzewski**: CEO and Co-Founder, ICEYE. Sessions: Wed 7 Oct 15:48 Fucine, "Proof From Elsewhere" [s958706].
+- **Raffaele Calandrella**: Engineering Director, Prima Assicurazioni. Sessions: Wed 7 Oct 15:00 Room A, "Building the AI-Native Company: lessons, challenges, and real-world impact" [s975879].
+- **Raouf Chebri**: Developer Relations Engineer, Replit. Sessions: Thu 8 Oct 14:00 Room B, "The Vibe Coding Era: why the next billion builders won't write a single line of code with Replit" [s972481].
+- **Riccardo Bassetto**: Host, Actually Podcast. Sessions: Thu 8 Oct 09:30 Room C, "Actually" (moderator) [s1024111]; Fri 9 Oct 10:30 Binario 3, "Reading the map: where Italian venture stands in Europe" (moderator) [s1040323]; Fri 9 Oct 16:20 Fucine, "Seed to Scale" (moderator) [s958708].
+- **Riccardo Di Maria**. Sessions: Thu 8 Oct 15:15 Binario 3, "Who trains the trains" [s1036707].
+- **Roberta Marracino**: Talent Lead, Accenture Italy and Greece, Accenture. Sessions: Wed 7 Oct 14:45 Binario 3, "Reinventing work in the age of AI" [s1021280].
+- **Roberto Urban**: SAP EMEA BAIP Solution Advisor, SAP. Sessions: Wed 7 Oct 15:00 Room B, "Build your first AI Agent in 45 minutes with SAP Joule Studio" [s979461].
+- **Roma van der Walt**: CEO & Founder, Vitelle. Sessions: Fri 9 Oct 14:00 Binario 3, "Beyond the pilot: how Juventus makes startup innovation compound" [s1038145].
+- **Rosemary Leith**: Founder / Fellow, Bolon Capital / Harvard Berkman Klein Centre. Sessions: Wed 7 Oct 11:13 Fucine, "Rewriting the Rules: From the Open Web to the Age of AI" [s951891].
+- **Roxanne Varza**: Director, Station F. Sessions: Thu 8 Oct 16:26 Fucine, "The Power of Proximity" [s1023502].
+- **Sachin Sachin**: Robotic Researcher, Istituto Italiano di Tecnologia. Sessions: Thu 8 Oct 14:00 Binario 3, "Soil: where biology, technology, and productivity converge" [s1036292].
+- **Sarah Suzuki**: Associate Director, MoMA. Sessions: Wed 7 Oct 10:24 Fucine, "Art in the Age of Thinking Machines" (moderator) [s930758].
+- **Scarlette De Gregorio**: Co-Founder & CMO, Fluum. Sessions: Thu 8 Oct 14:00 Room A, "The Revenue You Can’t See: a full-field framework to unlock hidden B2B pipeline with AI, data, and channels" [s1022134].
+- **Sebastian Mallaby**: Paul A. Volcker Senior Fellow for International Economics, The Council on Foreign Relations. Sessions: Thu 8 Oct 09:36 Fucine, "The Race to Build Intelligence" [s959828].
+- **Simone Enea Riccò**: Product Marketing Director, Talent Garden. Sessions: Thu 8 Oct 16:00 Room A, "H.A.R. Orchestration: The Framework for Scaling AI into Competitive Advantage" [s1024054].
+- **Sir Tim Berners-Lee**: Co-founder & CTO, Inrupt. Sessions: Wed 7 Oct 11:13 Fucine, "Rewriting the Rules: From the Open Web to the Age of AI" [s951891].
+- **Sonali De Rycker**: Partner, Accel. Sessions: Thu 8 Oct 17:15 Fucine, "Automating the Unglamorous" [s969359].
+- **Sophie Evans**: STA Creative Strategy Director, Teads. Sessions: Wed 7 Oct 10:15 Binario 3, "Made by AI: a conversation on advertising's next shift" [s1035552].
+- **Stefania Ruggeri**: Direttrice Centro di Ricerca CREA Alimenti e Nutrizione, Roma, CREA- Consiglio per la Ricerca in Agricoltura e l’Analisi dell’Economia Agraria. Sessions: Wed 7 Oct 11:05 Binario 3, "Fuel for life: food, wellbeing and the case for innovation" [s1021112].
+- **Stefano Neri**: Responsabile Ingegneria, Tecnologie Rotabili e Innovazione, Trenitalia (Gruppo FS). Sessions: Thu 8 Oct 15:15 Binario 3, "Who trains the trains" [s1036707].
+- **Susan Phan**: Chief Financial Officer, Pigment. Sessions: Thu 8 Oct 17:37 Fucine, "The Operating System of Growth" [s966700].
+- **Teodoro Lio**: CEO, Accenture Italy. Sessions: Thu 8 Oct 10:30 Binario 3, "AI and industry: the value challenge" [s1021278].
+- **Tim Harrison**: Head of AI Transformation, Hg. Sessions: Thu 8 Oct 15:00 Room A, "From AI Theatre to P&L Impact: how to rewire software business models AI-first" [s1000822].
+- **Tom Conca**: Partner, QuantumLight. Sessions: Fri 9 Oct 15:39 Fucine, "Algorithm vs Instinct" [s973240].
+- **Tom Mackenzie**: Bloomberg. Sessions: Fri 9 Oct 10:36 Fucine, "Mindset, Not Skillset" (moderator) [s1036184].
+- **Tom Wehmeier**: Partner, Atomico. Sessions: Thu 8 Oct 14:00 Fucine, "The State of the European Tech Ecosystem" [s966696].
+- **Tommaso Di Stefano**. Sessions: Wed 7 Oct 11:55 Binario 3, "Startup pitch competition by Ascensore" [s1021115].
+- **Tommaso Ghidini**: Head of the Mechanical Departement, ESA. Sessions: Fri 9 Oct 10:00 Binario 3, "SCENARIO: The next fifty years of being human" [s1035606].
+- **Tommaso Masi**: Content Creator, Tommaso Masi (Tommyverse). Sessions: Wed 7 Oct 14:00 Room C, "Better" (moderator) [s1039675].
+- **Tony Xu**: Co-Founder and CEO, DoorDash. Sessions: Wed 7 Oct 14:59 Fucine, "Inside the Making of DoorDash" [s958703].
+- **Valentino Magliaro**: Canva. Sessions: Fri 9 Oct 14:00 Room C, "Design, Brand & AI: making creativity accessible to everyone with Canva" [s1039102].
+- **Verena Papik**: Chief Emotion Officer, Talkalytics. Sessions: Fri 9 Oct 14:00 Binario 3, "Beyond the pilot: how Juventus makes startup innovation compound" [s1038145].
+- **Victoria Botella**: GTM, OpenAI. Sessions: Fri 9 Oct 11:12 Fucine, "Beyond the Pilot: How AI Changes the Way Companies Work" [s1022848].
+- **Virgílio Bento**: Founder, Chairman, CEO and Janitor, Sword. Sessions: Wed 7 Oct 17:31 Fucine, "The Hardest Problem to Build For" [s976411].
+- **Virginia Gambardella**: Qura. Sessions: Fri 9 Oct 16:20 Fucine, "Seed to Scale" [s958708].
+- **Virginia Pigato**: Investor, Vento. Sessions: Wed 7 Oct 12:30 Room C, "Vento Meets" (moderator) [s1039674].
+- **Vito Giacovelli**: Business Strategy & Operations, Embodied AI. Sessions: Fri 9 Oct 14:00 Room A, "Teaching Robots to Work: World Models and Adaptive Robotics for Manufacturing" [s1034496].
+- **Vittoria Vimercati**: Editor, LinkedIn Notizie. Sessions: Fri 9 Oct 15:00 Room A, "From Personal Branding to Thought Leadership: how to build your presence on LinkedIn" [s977840].
+- **Vittorio Colao**: Vice Chairman EMEA, General Atlantic. Sessions: Fri 9 Oct 10:14 Fucine, "The Whole Board" [s1037469].
+- **Walter Renna**: CEO, Fastweb + Vodafone. Sessions: Fri 9 Oct 10:55 Binario 3, "The role of telcos in building a sovereign digital ecosystem" [s1039330].
+- **Yoram Wijngaarde**: CEO & Founder, Dealroom.co. Sessions: Thu 8 Oct 14:00 Fucine, "The State of the European Tech Ecosystem" [s966696]; Fri 9 Oct 14:00 Fucine, "The state of startups and VC in Italy" [s958705].
+- **Yoshimasa Tosaka**: Chief Executive, Policy Management Bureau, Kitakyushu City. Sessions: Fri 9 Oct 10:30 Room B, "From Industrial Cities to Sustainable Urban Futures: planning, governance and participation for urban transformation" [s1038962].
+- **Yuri Mariotti**: Fractional CAIO. Sessions: Thu 8 Oct 09:30 Room A, "AI in SMEs: three impacts no one saw coming" [s979424].
+- **Zanny Minton Beddoes**: Editor-in-Chief, The Economist. Sessions: Wed 7 Oct 12:12 Fucine, "Designing the World We Live In" (moderator) [s930763]; Wed 7 Oct 17:09 Fucine, "The Trip AI Can't Take" (moderator) [s970430].
+- **Zhaopeng Chen**: CEO & Founder, Agile Robots SE. Sessions: Thu 8 Oct 12:02 Fucine, "From Space to the Factory Floor: The Rise of Physical AI" [s963612].
+
+_Checked against official sources on 2026-10-01. Unofficial guide built from the official website, the official agenda and public sources. Not affiliated with Vento or Wave by Vento. Always double-check on the official website and app. Times are Europe/Rome (CEST, UTC+2)._

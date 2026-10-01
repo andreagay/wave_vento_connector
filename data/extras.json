@@ -1,0 +1,42 @@
+{
+  "note": "Official-adjacent events that are not in the Brella agenda. Each one cites its source.",
+  "sessions": [
+    {
+      "id": "x-vcunder35",
+      "title": "VCunder35: networking for young VCs",
+      "format": "networking",
+      "stage": "OGR Tech, Refectory",
+      "date": "2026-10-07",
+      "start": "18:00",
+      "end": "20:00",
+      "starts_at": "2026-10-07T16:00:00.000Z",
+      "description": "Exclusive networking event for the new generation of venture capital investors and professionals, bringing together young investors from the international VC community. Organised by Growth Capital, OGR Torino and Ring Capital.",
+      "capacity": null,
+      "speakers": [],
+      "booking": "Exclusive event for young VCs; reservation available on the OGR Torino website.",
+      "url": "https://ogrtorino.it/events/wave-by-vento-2026",
+      "sources": [
+        "ogr-wave"
+      ]
+    },
+    {
+      "id": "x-wav-closing-party",
+      "title": ".WAV by Recall: official closing party",
+      "format": "party",
+      "stage": "OGR Torino",
+      "date": "2026-10-09",
+      "start": "22:00",
+      "end": null,
+      "starts_at": "2026-10-09T20:00:00.000Z",
+      "description": "The official grand finale of Wave by Vento: an exploration of sound, technology and architecture. Line-up: Luce Clandestina (DJ set), Octavio Octavio (live), Pangaea B2B Impérieux (DJ set). Produced by Wave and Piano B, curated by Recall.",
+      "capacity": null,
+      "speakers": [],
+      "booking": "Listed among the perks of every Wave pass; reserve your spot on DICE.",
+      "url": "https://dice.fm/event/7d5kq9-wav-9th-oct-ogr-torino-torino-tickets",
+      "sources": [
+        "wave-event-info",
+        "dice-wav"
+      ]
+    }
+  ]
+}

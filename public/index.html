@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wave by Vento per Claude</title>
+  <meta name="description" content="Guida non ufficiale a Wave by Vento 2026 (OGR Torino, 7-9 ottobre) come plugin e connettore per Claude.">
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --surface: #ffffff;
+      --text: #1d1d1b;
+      --muted: #5f5f5a;
+      --border: #e2e1da;
+      --accent: #1f5f8b;
+      --accent-text: #ffffff;
+      --code-bg: #f0efe9;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #161615;
+        --surface: #1f1f1d;
+        --text: #ecebe6;
+        --muted: #a8a79f;
+        --border: #34332f;
+        --accent: #7fb6dc;
+        --accent-text: #10202b;
+        --code-bg: #2a2a27;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #161615;
+      --surface: #1f1f1d;
+      --text: #ecebe6;
+      --muted: #a8a79f;
+      --border: #34332f;
+      --accent: #7fb6dc;
+      --accent-text: #10202b;
+      --code-bg: #2a2a27;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 56px; }
+    header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .eyebrow { margin: 0 0 6px; color: var(--muted); font-size: 14px; letter-spacing: .02em; }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 6vw, 40px); line-height: 1.15; }
+    h2 { margin: 0 0 12px; font-size: 20px; }
+    p { margin: 0 0 12px; }
+    .lead { font-size: 18px; color: var(--muted); }
+    .lang { display: flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; flex-shrink: 0; }
+    .lang button { border: 0; background: transparent; color: var(--muted); padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer; }
+    .lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-top: 20px; }
+    .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; }
+    .facts li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; }
+    .facts b { display: block; font-size: 15px; }
+    .facts span { color: var(--muted); font-size: 14px; }
+    .url-row { display: flex; gap: 8px; margin: 8px 0 4px; }
+    .url-row code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; }
+    code { background: var(--code-bg); border-radius: 8px; padding: 10px 12px; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; display: block; }
+    p code, li code { display: inline; padding: 1px 6px; border-radius: 6px; }
+    .btn { border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-text); padding: 0 16px; font: inherit; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .btn:focus-visible, .lang button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    ol, ul { margin: 0 0 12px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .examples li { font-style: italic; }
+    footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
+    a { color: var(--accent); }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow" data-l="it">Guida non ufficiale · plugin e connettore per Claude</p>
+        <p class="eyebrow" data-l="en" hidden>Unofficial guide · Claude plugin and connector</p>
+        <h1>Wave by Vento 2026 <span data-l="it">per Claude</span><span data-l="en" hidden>for Claude</span></h1>
+      </div>
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button type="button" data-set-lang="it" aria-pressed="true">IT</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <p class="lead" data-l="it">Chiedi a Claude programma, speaker, masterclass, eventi collaterali, pass e logistica di Wave by Vento (ex Italian Tech Week), con dati verificati e link alle fonti ufficiali.</p>
+    <p class="lead" data-l="en" hidden>Ask Claude about the program, speakers, masterclasses, side events, passes and logistics of Wave by Vento (formerly Italian Tech Week), with verified data and links to official sources.</p>
+
+    <ul class="facts">
+      <li><b data-l="it">7-9 ottobre 2026</b><b data-l="en" hidden>7-9 October 2026</b><span>09:00-18:00</span></li>
+      <li><b>OGR Torino</b><span>Corso Castelfidardo 22</span></li>
+      <li><b data-l="it">200+ speaker</b><b data-l="en" hidden>200+ speakers</b><span data-l="it">70+ talk, 45 masterclass</span><span data-l="en" hidden>70+ talks, 45 masterclasses</span></li>
+    </ul>
+
+    <section class="card" aria-labelledby="plugin-title">
+      <h2 id="plugin-title" data-l="it">1 · Installa il plugin (piani Pro, Max, Team, Enterprise)</h2>
+      <h2 data-l="en" hidden>1 · Install the plugin (Pro, Max, Team, Enterprise plans)</h2>
+      <ol data-l="it">
+        <li>In Claude apri <b>Personalizza → Plugin</b> (in inglese: <i>Customize → Plugins</i>).</li>
+        <li>Clicca <b>Aggiungi → Aggiungi marketplace</b> (<i>Add → Add marketplace</i>) e inserisci <code>andreagay/wave_vento_connector</code>.</li>
+        <li>Installa <b>wave-by-vento</b>. Funziona in chat, Cowork e Claude Code.</li>
+      </ol>
+      <ol data-l="en" hidden>
+        <li>In Claude open <b>Customize → Plugins</b>.</li>
+        <li>Click <b>Add → Add marketplace</b> and enter <code>andreagay/wave_vento_connector</code>.</li>
+        <li>Install <b>wave-by-vento</b>. It works in chat, Cowork and Claude Code.</li>
+      </ol>
+      <p class="muted" data-l="it">In alternativa scarica <a href="https://github.com/andreagay/wave_vento_connector/raw/main/dist/wave-by-vento.plugin">wave-by-vento.plugin</a> e caricalo da Personalizza → Plugin.</p>
+      <p class="muted" data-l="en" hidden>Alternatively download <a href="https://github.com/andreagay/wave_vento_connector/raw/main/dist/wave-by-vento.plugin">wave-by-vento.plugin</a> and upload it from Customize → Plugins.</p>
+    </section>
+
+    <section class="card" aria-labelledby="connector-title">
+      <h2 id="connector-title" data-l="it">2 · Oppure aggiungi il connettore (tutti i piani, anche Free)</h2>
+      <h2 data-l="en" hidden>2 · Or add the connector (all plans, Free included)</h2>
+      <p data-l="it">URL del connettore:</p>
+      <p data-l="en" hidden>Connector URL:</p>
+      <div class="url-row">
+        <code id="mcp-url">https://…/mcp</code>
+        <button class="btn" type="button" id="copy"><span data-l="it">Copia</span><span data-l="en" hidden>Copy</span></button>
+      </div>
+      <p class="muted" id="copied" aria-live="polite"></p>
+      <ol data-l="it">
+        <li>In Claude apri <b>Personalizza → Connettori</b>, clicca <b>+</b> e poi <b>Aggiungi connettore personalizzato</b> (<i>Customize → Connectors → + → Add custom connector</i>).</li>
+        <li>Nome: <b>Wave by Vento</b>. URL: quello qui sopra. Nessuna autenticazione richiesta.</li>
+        <li>In una chat attiva il connettore dal menu <b>+</b> e chiedi, ad esempio, "Cosa c'è giovedì a Wave?".</li>
+      </ol>
+      <ol data-l="en" hidden>
+        <li>In Claude open <b>Customize → Connectors</b>, click <b>+</b> then <b>Add custom connector</b>.</li>
+        <li>Name: <b>Wave by Vento</b>. URL: the one above. No authentication needed.</li>
+        <li>In a chat, enable the connector from the <b>+</b> menu and ask, for example, "What's on at Wave on Thursday?".</li>
+      </ol>
+      <p class="muted" data-l="it">Team ed Enterprise: un Owner lo aggiunge per tutti da Impostazioni organizzazione → Connettori → Aggiungi → Personalizzato → Web. Claude Code: <code>claude mcp add --transport http wave-by-vento &lt;URL&gt;</code></p>
+      <p class="muted" data-l="en" hidden>Team and Enterprise: an Owner adds it for everyone from Organization settings → Connectors → Add → Custom → Web. Claude Code: <code>claude mcp add --transport http wave-by-vento &lt;URL&gt;</code></p>
+    </section>
+
+    <section class="card" aria-labelledby="examples-title">
+      <h2 id="examples-title" data-l="it">Cosa chiedere</h2>
+      <h2 data-l="en" hidden>What to ask</h2>
+      <ul class="examples" data-l="it">
+        <li>Quando parlano Jony Ive e John Elkann, e su quale palco?</li>
+        <li>Quali masterclass sull'AI ci sono giovedì mattina?</li>
+        <li>Sono un founder fintech: preparami un piano per l'8 e il 9 ottobre.</li>
+        <li>Quali eventi collaterali ci sono mercoledì sera?</li>
+        <li>Come arrivo alle OGR da Porta Susa e dove stampo il badge?</li>
+      </ul>
+      <ul class="examples" data-l="en" hidden>
+        <li>When are Jony Ive and John Elkann on stage, and where?</li>
+        <li>Which AI masterclasses are on Thursday morning?</li>
+        <li>I'm a fintech founder: plan my 8 and 9 October.</li>
+        <li>Which side events are on Wednesday evening?</li>
+        <li>How do I get to OGR from Porta Susa, and where do I print my badge?</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p data-l="it">Progetto non ufficiale, non affiliato a Vento o Wave by Vento. I dati arrivano da fonti pubbliche e dal sito ufficiale: verifica sempre su <a href="https://wavebyvento.com/">wavebyvento.com</a> e nell'app ufficiale. Codice: <a href="https://github.com/andreagay/wave_vento_connector">GitHub</a>.</p>
+      <p data-l="en" hidden>Unofficial project, not affiliated with Vento or Wave by Vento. Data comes from public sources and the official website: always double-check on <a href="https://wavebyvento.com/">wavebyvento.com</a> and in the official app. Code: <a href="https://github.com/andreagay/wave_vento_connector">GitHub</a>.</p>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var url = location.origin + "/mcp";
+      document.getElementById("mcp-url").textContent = url;
+      var lang = "it";
+
+      function setLang(next) {
+        lang = next;
+        document.documentElement.lang = next;
+        document.querySelectorAll("[data-l]").forEach(function (el) { el.hidden = el.getAttribute("data-l") !== next; });
+        document.querySelectorAll("[data-set-lang]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === next)); });
+        try { localStorage.setItem("wave-lang", next); } catch (e) {}
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem("wave-lang"); } catch (e) {}
+      setLang(saved || ((navigator.language || "it").toLowerCase().indexOf("it") === 0 ? "it" : "en"));
+      document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+        b.addEventListener("click", function () { setLang(b.getAttribute("data-set-lang")); });
+      });
+
+      document.getElementById("copy").addEventListener("click", function () {
+        var done = function () {
+          document.getElementById("copied").textContent = lang === "it" ? "URL copiato." : "URL copied.";
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () { window.prompt("URL", url); });
+        } else {
+          window.prompt("URL", url);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

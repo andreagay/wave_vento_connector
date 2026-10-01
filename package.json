@@ -1,0 +1,26 @@
+{
+  "name": "wave-vento-connector",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Unofficial Claude plugin + MCP connector for Wave by Vento 2026 (Turin, 7-9 October 2026).",
+  "type": "module",
+  "bin": {
+    "wave-by-vento-mcp": "src/stdio.js"
+  },
+  "scripts": {
+    "start": "node src/serve.js",
+    "stdio": "node src/stdio.js",
+    "test": "node --test test/*.test.js",
+    "test:live": "WAVE_LIVE_TESTS=1 node --test test/live-integration.test.js",
+    "sync:agenda": "node scripts/sync-agenda.mjs",
+    "build:plugin": "node scripts/build-plugin.mjs",
+    "check:plugin": "node scripts/build-plugin.mjs --check"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^4.6.5"
+  }
+}
