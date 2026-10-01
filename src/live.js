@@ -1,48 +1,23 @@
 // Live data from public official sources: wavebyvento.com pages and the
 // official Luma side-events calendar. Everything here is best effort: callers
-// must handle errors and fall back to the curated dataset and links.
+// must handle errors and fall back to the curated data and links.
 import { EVENT, matchScore, normalize, tokenize } from "./data.js";
+import { cached, fetchOk } from "./util.js";
 
+export { clearLiveCache, romeDate, romeTime } from "./util.js";
+
+// The agenda page is a JavaScript widget (see agenda.js) and the side events
+// have their own tool, so only pages with server-rendered text are listed.
 export const OFFICIAL_PAGES = {
-  agenda: "https://wavebyvento.com/agenda",
-  home: "https://wavebyvento.com/",
   faqs: "https://wavebyvento.com/faqs",
   event_info: "https://wavebyvento.com/event-info",
-  passes: "https://get.wavebyvento.com/pass",
+  passes: "https://wavebyvento.com/getyourpass",
   pass_faq: "https://wavebyvento.com/faq-pass",
   enjoy_turin: "https://wavebyvento.com/enjoy-turin",
-  side_events_calendar: EVENT.side_events.calendar_url,
+  home: "https://wavebyvento.com/",
 };
 
-const USER_AGENT = "wave-vento-connector/1.0 (+https://github.com/andreagay/wave_vento_connector)";
-const TIMEOUT_MS = 8000;
-const CACHE_TTL_MS = 10 * 60 * 1000;
 const LUMA_API_HOSTS = ["https://api.lu.ma", "https://api2.luma.com"];
-
-const cache = new Map();
-
-export function clearLiveCache() {
-  cache.clear();
-}
-
-// Caches successful results only, so a transient failure is retried next call.
-async function cached(key, compute) {
-  const hit = cache.get(key);
-  if (hit && hit.expires > Date.now()) return hit.value;
-  const value = await compute();
-  cache.set(key, { value, expires: Date.now() + CACHE_TTL_MS });
-  return value;
-}
-
-async function fetchOk(fetchImpl, url, accept) {
-  const res = await fetchImpl(url, {
-    headers: { "user-agent": USER_AGENT, accept },
-    redirect: "follow",
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
-  return res;
-}
 
 const NAMED_ENTITIES = {
   amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ndash: "-", mdash: "-", hellip: "...",
@@ -69,7 +44,7 @@ export function extractTitle(html) {
 export function htmlToText(html) {
   let s = String(html);
   s = s.replace(/<!--[\s\S]*?-->/g, " ");
-  s = s.replace(/<(head|title|script|style|noscript|svg|template|iframe)\b[\s\S]*?<\/\1\s*>/gi, " ");
+  s = s.replace(/<(head|title|script|style|noscript|svg|template|iframe|nav)\b[\s\S]*?<\/\1\s*>/gi, " ");
   s = s.replace(/<h([1-6])\b[^>]*>/gi, (_, level) => `\n${"#".repeat(Number(level))} `);
   s = s.replace(/<li\b[^>]*>/gi, "\n- ");
   s = s.replace(/<(br|hr)\b[^>]*>/gi, "\n");
@@ -78,7 +53,7 @@ export function htmlToText(html) {
   s = decodeEntities(s);
   const lines = s
     .split("\n")
-    .map((l) => l.replace(/[ \t\f\v ]+/g, " ").trim())
+    .map((l) => l.replace(/[\u200b-\u200d\ufeff]/g, "").replace(/[ \t\f\v\u00a0]+/g, " ").trim())
     .filter((l) => l && l !== "-" && !/^#+$/.test(l));
   // Drop consecutive duplicates (menus and carousels repeat a lot).
   return lines.filter((l, i) => l !== lines[i - 1]).join("\n");
@@ -143,7 +118,7 @@ export function collectLumaEvents(payload) {
     const hosts = [].concat(o.hosts ?? ev.hosts ?? []).map((h) => h?.name).filter(Boolean);
     const ticket = o.ticket_info ?? ev.ticket_info ?? {};
     const item = {
-      title: ev.name.trim(),
+      title: ev.name.replace(/\s+/g, " ").trim(),
       start: ev.start_at,
       end: typeof ev.end_at === "string" ? ev.end_at : null,
       location: geo.full_address ?? geo.address ?? geo.city_state ?? geo.city ?? (ev.location_type === "online" ? "Online" : null),
@@ -230,13 +205,23 @@ export async function fetchSideEvents({ fetchImpl = globalThis.fetch } = {}) {
   });
 }
 
-// Calendar date (YYYY-MM-DD) of an ISO timestamp in the event time zone.
-export function romeDate(iso) {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: EVENT.event.timezone, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
-}
-
-export function romeTime(iso) {
-  return new Intl.DateTimeFormat("en-GB", { timeZone: EVENT.event.timezone, hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(iso));
+// Webflow pages repeat a marquee and end with footer and newsletter blocks:
+// keep the first copy of lines repeated 3+ times and cut the site footer.
+export function stripBoilerplate(text) {
+  let lines = text.split("\n");
+  const footer = lines.findIndex((l, i) => i > 0 && l === "ORGANIZED BY");
+  if (footer > 0) lines = lines.slice(0, footer);
+  const counts = new Map();
+  for (const l of lines) counts.set(l, (counts.get(l) ?? 0) + 1);
+  const seen = new Set();
+  return lines
+    .filter((l) => {
+      if (counts.get(l) < 3) return true;
+      if (seen.has(l)) return false;
+      seen.add(l);
+      return true;
+    })
+    .join("\n");
 }
 
 /**
@@ -248,7 +233,7 @@ export async function readOfficialPage(page, { find, maxChars = 12000, fetchImpl
   if (!url) throw new Error(`Unknown page "${page}"`);
   const parsed = await cached(`page:${page}`, async () => {
     const html = await (await fetchOk(fetchImpl, url, "text/html")).text();
-    return { title: extractTitle(html), text: htmlToText(html), events: eventsFromJsonLd(extractJsonLd(html)) };
+    return { title: extractTitle(html), text: stripBoilerplate(htmlToText(html)), events: eventsFromJsonLd(extractJsonLd(html)) };
   });
 
   let text = parsed.text;

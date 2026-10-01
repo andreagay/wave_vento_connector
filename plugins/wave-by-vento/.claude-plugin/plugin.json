@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "wave-by-vento",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Unofficial guide to Wave by Vento 2026 (formerly Italian Tech Week): agenda, speakers, masterclasses, side events, passes and logistics at OGR Torino, 7-9 October 2026.",
   "author": {
     "name": "Andrea Gay"

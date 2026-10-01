@@ -1,88 +1,82 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { EVENT, EVENT_DAYS, SESSIONS, SESSION_TYPES, SOURCES, SPEAKERS, findSpeakers, getSpeaker, searchProgram } from "../src/data.js";
+import { normalizeBrella } from "../src/agenda.js";
+import { EVENT, EVENT_DAYS, EXTRAS, FORMATS, SNAPSHOT, SOURCES, findSpeakers, matchScore, prepareAgenda, searchSessions, sessionById, sessionsOfSpeaker } from "../src/data.js";
+import { romeDate, romeTime } from "../src/util.js";
+import { BRELLA_FIXTURE } from "./fixtures.js";
 
-function collectSourceIds(node, out = []) {
-  if (Array.isArray(node)) node.forEach((n) => collectSourceIds(n, out));
-  else if (node && typeof node === "object") {
-    for (const [key, value] of Object.entries(node)) {
-      if (key === "sources" && Array.isArray(value) && value.every((v) => typeof v === "string")) out.push(...value);
-      else collectSourceIds(value, out);
-    }
+const TIME = /^([01]\d|2[0-3]):[0-5]\d$/;
+
+test("event info: every section cites known sources and has content", () => {
+  assert.ok(EVENT.sections.length >= 10);
+  for (const section of EVENT.sections) {
+    assert.ok(section.items.length > 0, section.id);
+    assert.ok(section.sources.length > 0, section.id);
+    for (const id of section.sources) assert.ok(SOURCES.has(id), `${section.id}: unknown source ${id}`);
   }
-  return out;
-}
-
-test("every referenced source id exists", () => {
-  const referenced = collectSourceIds([EVENT, SPEAKERS, SESSIONS]);
-  assert.ok(referenced.length > 20);
-  for (const id of referenced) assert.ok(SOURCES.has(id), `unknown source id: ${id}`);
+  for (const p of EVENT.announced_not_in_agenda) for (const id of p.sources) assert.ok(SOURCES.has(id), id);
+  for (const s of EXTRAS) for (const id of s.sources) assert.ok(SOURCES.has(id), id);
 });
 
-test("every fact block, speaker and session cites at least one source", () => {
-  for (const s of SPEAKERS) assert.ok(s.sources.length > 0, s.id);
-  for (const s of SESSIONS) assert.ok(s.sources.length > 0, s.id);
-  for (const key of ["event", "numbers", "venue", "stages", "getting_there", "passes", "access", "official_app", "on_site", "side_events", "closing_party"]) {
-    assert.ok(EVENT[key].sources.length > 0, key);
-  }
-});
-
-test("all links are https", () => {
-  const urls = [...Object.values(EVENT.links), ...EVENT.event.sources.map((id) => SOURCES.get(id).url), ...[...SOURCES.values()].map((s) => s.url)];
-  for (const url of urls) assert.match(url, /^https:\/\//);
+test("all links and sources are https", () => {
+  for (const url of [...Object.values(EVENT.links), ...[...SOURCES.values()].map((s) => s.url)]) assert.match(url, /^https:\/\//);
 });
 
 test("event days are 7-9 October 2026", () => {
   assert.deepEqual(EVENT_DAYS, ["2026-10-07", "2026-10-08", "2026-10-09"]);
-  assert.equal(EVENT.event.start_date, EVENT_DAYS[0]);
-  assert.equal(EVENT.event.end_date, EVENT_DAYS.at(-1));
 });
 
-test("sessions are well formed", () => {
-  const ids = new Set();
-  for (const s of SESSIONS) {
-    assert.ok(!ids.has(s.id), `duplicate session id ${s.id}`);
-    ids.add(s.id);
-    assert.ok(SESSION_TYPES.includes(s.type), `${s.id}: unknown type ${s.type}`);
-    assert.ok(s.date === null || EVENT_DAYS.includes(s.date), `${s.id}: date outside the event`);
-    for (const t of [s.start, s.end]) assert.ok(t === null || /^([01]\d|2[0-3]):[0-5]\d$/.test(t), `${s.id}: bad time ${t}`);
-    if (s.start && s.end) assert.ok(s.start < s.end, `${s.id}: ends before it starts`);
-    if (s.date === null) assert.equal(s.start, null, `${s.id}: time without a date`);
-    for (const id of s.speakers) assert.ok(getSpeaker(id), `${s.id}: unknown speaker ${id}`);
+test("agenda snapshot and extras are consistent", () => {
+  assert.ok(SNAPSHOT.sessions.length > 50, "snapshot looks empty");
+  assert.ok(!Number.isNaN(Date.parse(SNAPSHOT.snapshot_at)));
+  const speakerIds = new Set(SNAPSHOT.speakers.map((s) => s.id));
+  assert.equal(speakerIds.size, SNAPSHOT.speakers.length, "speaker ids are unique");
+  const sessionIds = new Set();
+  for (const s of [...SNAPSHOT.sessions, ...EXTRAS]) {
+    assert.ok(!sessionIds.has(s.id), `duplicate id ${s.id}`);
+    sessionIds.add(s.id);
+    assert.ok(FORMATS.includes(s.format), `${s.id}: format ${s.format}`);
+    assert.ok(EVENT_DAYS.includes(s.date), `${s.id}: date ${s.date}`);
+    assert.match(s.start, TIME);
+    if (s.end) assert.ok(s.start < s.end, `${s.id}: ends before it starts`);
+    assert.equal(romeDate(s.starts_at), s.date, `${s.id}: starts_at and date disagree`);
+    assert.equal(romeTime(s.starts_at), s.start, `${s.id}: starts_at and start disagree`);
+    for (const ref of s.speakers) assert.ok(speakerIds.has(ref.id), `${s.id}: unknown speaker ${ref.id}`);
   }
 });
 
-test("speaker ids are unique", () => {
-  assert.equal(new Set(SPEAKERS.map((s) => s.id)).size, SPEAKERS.length);
+// Search behaviour is tested on the fixture, so it does not depend on the snapshot.
+const agenda = prepareAgenda(normalizeBrella(BRELLA_FIXTURE));
+
+test("prepareAgenda adds the extras in time order", () => {
+  assert.deepEqual(agenda.sessions.map((s) => s.id), ["s3", "s2", "s4", "x-vcunder35", "s1", "x-wav-closing-party"]);
+  assert.equal(sessionById(agenda, "x-wav-closing-party").format, "party");
+  assert.equal(sessionById(agenda, "nope"), null);
+  assert.deepEqual(sessionsOfSpeaker(agenda, "p11").map((s) => s.id), ["s2"]);
 });
 
-test("searchProgram finds sessions by keyword, speaker, type and day", () => {
-  assert.deepEqual(searchProgram({ query: "Amodei" }).sessions.map((s) => s.id), ["amodei-elkann-fireside"]);
-  assert.deepEqual(searchProgram({ speaker: "Mariotti" }).sessions.map((s) => s.id), ["masterclass-ai-in-smes"]);
-  assert.deepEqual(searchProgram({ type: "party" }).sessions.map((s) => s.id), ["wav-closing-party"]);
-
-  const thursday = searchProgram({ day: "2026-10-08" });
-  assert.deepEqual(thursday.sessions.map((s) => s.id), ["masterclass-ai-in-smes"]);
-  assert.deepEqual(thursday.undated.map((s) => s.id), ["amodei-elkann-fireside"], "undated sessions are reported separately, not placed on the day");
-
-  assert.equal(searchProgram({ query: "blockchain gaming" }).sessions.length, 0);
+test("searchSessions filters by day, format, stage, speaker and time", () => {
+  const ids = (filters) => searchSessions(agenda, filters).map((s) => s.id);
+  assert.deepEqual(ids({ day: "2026-10-08" }), ["s1"]);
+  assert.deepEqual(ids({ format: "masterclass" }), ["s1"]);
+  assert.deepEqual(ids({ stage: "room" }), ["s3", "s1"]);
+  assert.deepEqual(ids({ stage: "fucine" }), ["s2"]);
+  assert.deepEqual(ids({ speaker: "Elkann" }), ["s2"]);
+  assert.deepEqual(ids({ speaker: "John Ive" }), [], "all speaker tokens must match the same person");
+  assert.deepEqual(ids({ day: "2026-10-07", from: "12:00", to: "17:00" }), ["s2", "s4"]);
 });
 
-test("searchProgram without filters returns everything in schedule order, undated last", () => {
-  const ids = searchProgram().sessions.map((s) => s.id);
-  assert.deepEqual(ids, ["vcunder35-networking", "masterclass-ai-in-smes", "wav-closing-party", "amodei-elkann-fireside"]);
+test("keyword search ranks title and speaker matches above description matches", () => {
+  assert.deepEqual(searchSessions(agenda, { query: "AI" }).map((s) => s.id), ["s1"]);
+  assert.deepEqual(searchSessions(agenda, { query: "Economist" }).map((s) => s.id), ["s2"], "matches the moderator's company");
+  assert.deepEqual(searchSessions(agenda, { query: "conversation design" }).map((s) => s.id)[0], "s2");
+  assert.deepEqual(searchSessions(agenda, { query: "the of at" }).length, agenda.sessions.length, "only filler words: no filter");
 });
 
-test("findSpeakers ignores accents and case", () => {
-  assert.deepEqual(findSpeakers("eleonore").map((s) => s.id), ["eleonore-crespo"]);
-  assert.deepEqual(findSpeakers("SEQUOIA").map((s) => s.id), ["anas-biad"]);
-  assert.equal(findSpeakers().length, SPEAKERS.length);
-  assert.equal(findSpeakers("nobody-at-all").length, 0);
-});
-
-test("matching works on word starts and ignores filler words, but keeps AI", () => {
-  assert.equal(findSpeakers("chi è il CEO di Revolut")[0].id, "nik-storonsky", "best match first");
-  assert.deepEqual(searchProgram({ query: "AI" }).sessions.map((s) => s.id), ["masterclass-ai-in-smes"]);
-  assert.deepEqual(searchProgram({ query: "SME" }).sessions.map((s) => s.id), ["masterclass-ai-in-smes"], "prefix of SMEs");
-  assert.equal(searchProgram({ query: "the of at" }).sessions.length, 4, "a query of filler words is no filter");
+test("findSpeakers matches names, roles and companies, ignoring accents and case", () => {
+  assert.deepEqual(findSpeakers(agenda, "ELKANN").map((s) => s.id), ["p11"]);
+  assert.deepEqual(findSpeakers(agenda, "chi è il CEO di Exor").map((s) => s.id)[0], "p11", "best match first");
+  assert.equal(findSpeakers(agenda).length, 4);
+  assert.equal(findSpeakers(agenda, "nobody-at-all").length, 0);
+  assert.equal(matchScore("Eléonore Crespo", "eleonore"), 1);
 });

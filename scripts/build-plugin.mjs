@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Builds the Claude plugin from /data:
+// Builds the Claude plugin from /data (refresh data/agenda.json first with
+// scripts/sync-agenda.mjs):
 //   - regenerates the skill references (plugins/wave-by-vento/skills/wave-by-vento/references/*.md)
 //   - packs dist/wave-by-vento.plugin (a zip you can upload in Claude or share)
 //
@@ -11,6 +12,7 @@
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { EVENT_DAYS, SNAPSHOT, prepareAgenda } from "../src/data.js";
 import { formatEventReference, formatProgramReference, formatSpeakersReference } from "../src/format.js";
 import { NAME, VERSION } from "../src/version.js";
 import { createZip } from "./zip.mjs";
@@ -24,11 +26,13 @@ const PACKAGE_FILE = join(ROOT, "dist", "wave-by-vento.plugin");
 const HEADER = "<!-- Generated from data/*.json by scripts/build-plugin.mjs: edit the data, not this file. -->\n\n";
 
 export function renderReferences() {
-  return {
-    "event.md": HEADER + formatEventReference() + "\n",
-    "program.md": HEADER + formatProgramReference() + "\n",
-    "speakers.md": HEADER + formatSpeakersReference() + "\n",
+  const agenda = prepareAgenda(SNAPSHOT);
+  const files = {
+    "event.md": formatEventReference(agenda),
+    "speakers.md": formatSpeakersReference(agenda, SNAPSHOT.snapshot_at),
   };
+  for (const day of EVENT_DAYS) files[`program-${day}.md`] = formatProgramReference(agenda, day, SNAPSHOT.snapshot_at);
+  return Object.fromEntries(Object.entries(files).map(([name, body]) => [name, `${HEADER}${body}\n`]));
 }
 
 export function mcpConfig(url) {
@@ -83,7 +87,13 @@ async function main(argv) {
   }
 
   const stale = [];
-  for (const [name, content] of Object.entries(renderReferences())) {
+  const references = renderReferences();
+  for (const name of await readdir(REFERENCES_DIR).catch(() => [])) {
+    if (name in references) continue;
+    if (check) stale.push(relative(ROOT, join(REFERENCES_DIR, name)));
+    else await rm(join(REFERENCES_DIR, name));
+  }
+  for (const [name, content] of Object.entries(references)) {
     const file = join(REFERENCES_DIR, name);
     if ((await readOrNull(file))?.toString("utf8") === content) continue;
     if (check) stale.push(relative(ROOT, file));

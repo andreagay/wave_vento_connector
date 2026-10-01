@@ -7,6 +7,9 @@ import vercelMcp from "../api/mcp.js";
 import vercelHealth from "../api/health.js";
 import { createHttpServer } from "../src/serve.js";
 
+// Serve the saved snapshot instead of calling the real services.
+process.env.WAVE_OFFLINE = "1";
+
 function listen(server) {
   return new Promise((resolve) => server.listen(0, "127.0.0.1", () => resolve(`http://127.0.0.1:${server.address().port}`)));
 }
@@ -17,11 +20,12 @@ async function exerciseMcp(baseUrl) {
   try {
     assert.equal(client.getServerVersion().name, "wave-by-vento");
     const { tools } = await client.listTools();
-    assert.equal(tools.length, 5);
+    assert.equal(tools.length, 6);
     const info = await client.callTool({ name: "get_event_info", arguments: { topic: "access_badge" } });
     assert.match(info.content[0].text, /identity document/);
-    const speakers = await client.callTool({ name: "find_speakers", arguments: { query: "Revolut" } });
-    assert.match(speakers.content[0].text, /Nik Storonsky/);
+    const party = await client.callTool({ name: "search_program", arguments: { format: "party" } });
+    assert.match(party.content[0].text, /official agenda snapshot/);
+    assert.match(party.content[0].text, /\.WAV by Recall/);
   } finally {
     await client.close();
   }

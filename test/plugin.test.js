@@ -62,6 +62,9 @@ test("packed plugin holds the manifest at its root plus the skill", async () => 
   assert.deepEqual(Object.keys(files).sort().slice(0, 2), [".claude-plugin/plugin.json", "skills/wave-by-vento/SKILL.md"]);
   assert.equal(JSON.parse(files[".claude-plugin/plugin.json"]).name, "wave-by-vento");
   assert.match(files["skills/wave-by-vento/references/event.md"], /Corso Castelfidardo 22/);
+  for (const day of ["2026-10-07", "2026-10-08", "2026-10-09"]) assert.match(files[`skills/wave-by-vento/references/program-${day}.md`], /\[s\d+\]/);
+  assert.match(files["skills/wave-by-vento/references/speakers.md"], /Sessions: /);
+  assert.ok(!("skills/wave-by-vento/references/program.md" in files), "old references are removed");
 });
 
 test("zip writer round-trips content and is deterministic", () => {

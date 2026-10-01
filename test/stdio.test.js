@@ -10,15 +10,15 @@ test("stdio entry point speaks MCP", async () => {
     new StdioClientTransport({
       command: process.execPath,
       args: [fileURLToPath(new URL("../src/stdio.js", import.meta.url))],
+      env: { ...process.env, WAVE_OFFLINE: "1" },
       stderr: "pipe",
     }),
   );
   try {
     const { tools } = await client.listTools();
     assert.ok(tools.some((t) => t.name === "search_program"));
-    const result = await client.callTool({ name: "search_program", arguments: { type: "party" } });
-    assert.match(result.content[0].text, /\.WAV: official closing party/);
-    assert.match(result.content[0].text, /Friday 9 October 2026, from 22:00/);
+    const result = await client.callTool({ name: "search_program", arguments: { format: "party" } });
+    assert.match(result.content[0].text, /\*\*Fri 9 Oct from 22:00 \| OGR Torino \| Party\*\*: \.WAV by Recall: official closing party/);
   } finally {
     await client.close();
   }

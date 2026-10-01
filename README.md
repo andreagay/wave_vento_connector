@@ -4,8 +4,8 @@ Guida **non ufficiale** a [Wave by Vento 2026](https://wavebyvento.com/) (ex Ita
 
 Contiene due pezzi, utilizzabili insieme o separatamente:
 
-- **Plugin Claude** `wave-by-vento`: una skill con i dati verificati dell'evento (date, sede, trasporti, pass, accesso e badge, app ufficiale, palchi, servizi, eventi collaterali, festa di chiusura, speaker annunciati, sessioni confermate) e le regole per rispondere bene. Funziona in chat, Cowork e Claude Code senza server.
-- **Connettore MCP** (remoto): aggiunge dati live dal sito ufficiale e dal calendario Luma degli eventi collaterali. Si pubblica gratis su Vercel e si condivide con un URL.
+- **Plugin Claude** `wave-by-vento`: una skill con il programma ufficiale completo (sessioni e speaker, giorno per giorno), le informazioni pratiche verificate sul sito ufficiale (pass e prezzi, accesso e badge, trasporti, app, servizi, streaming, eventi collaterali, festa di chiusura) e le regole per rispondere bene. Funziona in chat, Cowork e Claude Code senza server.
+- **Connettore MCP** (remoto): legge in tempo reale l'agenda ufficiale, il calendario Luma degli eventi collaterali e le pagine del sito ufficiale. Si pubblica gratis su Vercel e si condivide con un URL.
 
 ## Come si condivide
 
@@ -48,7 +48,7 @@ Su Vercel (gratis, nessuna configurazione):
    git add -A && git commit -m "Collega il connettore al plugin" && git push
    ```
 
-Funziona anche su qualsiasi host Node 20+ (Render, Railway, Fly, Docker): `npm start` espone `/mcp`, `/health` e la pagina su `/` (porta da `PORT`, default 3000).
+Funziona anche su qualsiasi host Node 18+ (Render, Railway, Fly, Docker): `npm start` espone `/mcp`, `/health` e la pagina su `/` (porta da `PORT`, default 3000).
 
 ## 3. Aggiungere solo il connettore
 
@@ -67,37 +67,46 @@ Strumenti del connettore (tutti in sola lettura):
 
 | Strumento | Cosa fa |
 | --- | --- |
-| `get_event_info` | Info pratiche verificate con fonti: date e orari, sede e trasporti, pass e sconti, ingresso e badge, app, palchi, cibo, guardaroba, bagagli, accessibilità, eventi collaterali, festa .WAV, link ufficiali |
-| `search_program` | Cerca tra le sessioni confermate da fonti pubbliche, per parola chiave, giorno, formato o speaker |
-| `find_speakers` | Speaker annunciati, con ruolo, azienda ed eventuale sessione |
+| `search_program` | Cerca nell'agenda ufficiale (talk sui palchi Fucine e Binario 3, masterclass, live podcast, pitch, più VCunder35 e la festa .WAV) per parola chiave, giorno, formato, sala, speaker e orario |
+| `get_session` | Scheda completa di una sessione: orario, sala, capienza, prenotazione, descrizione e bio degli speaker |
+| `find_speakers` | Speaker dell'agenda ufficiale con ruolo, azienda e sessioni; segnala chi era stato annunciato ma non è in agenda |
+| `get_event_info` | Info pratiche verificate con fonti: pass e prezzi, ingresso e badge, trasporti, app, palchi, networking, cibo e servizi, streaming, eventi collaterali, festa .WAV, Torino, contatti, link |
 | `get_side_events` | Eventi collaterali live dal calendario Luma ufficiale, filtrabili per giorno e parola chiave |
-| `read_official_page` | Testo aggiornato delle pagine ufficiali (agenda, FAQ, info evento, pass, Torino), con filtro per parole chiave |
+| `read_official_page` | Testo aggiornato delle pagine ufficiali (FAQ, info evento, pass, Torino), con filtro per parole chiave |
+
+L'agenda arriva dalle stesse API pubbliche di Brella usate dal widget su wavebyvento.com/agenda. Se non risponde, il connettore usa l'ultimo snapshot salvato in `data/agenda.json` e lo dice.
 
 C'è anche il prompt **plan_my_wave**, che costruisce un programma personale giorno per giorno.
 
-Esempi di domande: "Quando parla Dario Amodei?", "Sono un founder fintech: preparami il 8 e 9 ottobre", "Che eventi collaterali ci sono mercoledì sera?", "Come arrivo alle OGR da Porta Susa e dove stampo il badge?".
+Esempi di domande: "Quando parlano Jony Ive e John Elkann?", "Quali masterclass sull'AI ci sono giovedì mattina?", "Sono un founder fintech: preparami l'8 e il 9 ottobre", "Che eventi collaterali ci sono mercoledì sera?", "Come arrivo alle OGR da Porta Susa e dove stampo il badge?".
 
 ## Aggiornare i dati
 
-Tutti i contenuti stanno in `data/` (verificati l'1 ottobre 2026, ognuno con le sue fonti in `data/event.json`):
+Tutti i contenuti stanno in `data/` (verificati sulle fonti ufficiali l'1 ottobre 2026):
 
-- `event.json`: informazioni pratiche, link e registro delle fonti;
-- `speakers.json`: speaker annunciati;
-- `program.json`: sessioni confermate (`date`, `start` e `end` restano `null` finché non sono pubblici).
+- `event.json`: informazioni pratiche per sezioni, ognuna con le sue fonti, più link e registro delle fonti;
+- `agenda.json`: snapshot dell'agenda ufficiale (sessioni e speaker), da cui nascono anche i riferimenti della skill;
+- `extras.json`: eventi collegati che non sono nell'agenda (VCunder35 alle OGR, festa .WAV), con fonti.
 
-Dopo una modifica:
+Per aggiornare:
 
 ```bash
+npm run sync:agenda    # nuovo snapshot dell'agenda ufficiale
 npm run build:plugin   # rigenera i riferimenti della skill e dist/wave-by-vento.plugin
-npm test               # 42 test: dati, ricerca, parser live, MCP via HTTP/stdio, plugin
+npm test               # test offline: dati, agenda, ricerca, parser live, MCP via HTTP/stdio, plugin
+npm run test:live      # verifica contro Brella, Luma e il sito ufficiale
 ```
+
+Dietro un proxy HTTP usa `NODE_USE_ENV_PROXY=1` (Node 22.21+). Con `WAVE_OFFLINE=1` il connettore non usa la rete e risponde dallo snapshot.
 
 Su Vercel il connettore si aggiorna da solo a ogni push. Per il plugin aumenta `version` in `package.json`, `src/version.js`, `plugins/wave-by-vento/.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` (il build controlla che coincidano), così chi lo ha installato dal marketplace riceve la nuova versione.
 
 ## Limiti noti
 
-- Il programma completo (70+ talk, 45 masterclass) non è nei dati curati: c'erano solo 4 sessioni con fonte pubblica. Il connettore lo legge live da `wavebyvento.com/agenda`; senza connettore la skill indica a Claude di cercarlo sul sito ufficiale. Se la pagina dell'agenda è generata via JavaScript, il testo può risultare scarno e Claude rimanda all'app ufficiale.
-- La lettura live di Luma e del sito ufficiale è testata con dati di esempio, ma non è stata provata contro i siti veri (non raggiungibili dall'ambiente di sviluppo). Dopo il deploy prova `get_side_events` e `read_official_page`.
+- Lo snapshot dell'agenda nel plugin è fermo alla data in cima ai file di programma: se l'agenda cambia, rilancia `npm run sync:agenda` e `npm run build:plugin`. Il connettore invece legge sempre l'agenda live.
+- Dario Amodei era stato annunciato a febbraio 2026, ma all'1 ottobre non è nell'agenda ufficiale: il plugin lo dice invece di inventare un orario.
+- Le API di Brella e Luma usate sono quelle pubbliche dei rispettivi widget e pagine, non documentate: se cambiano formato, `npm run test:live` lo segnala e il connettore ripiega su snapshot e link ufficiali.
+- Non ho potuto confrontare questa versione con il plugin ChatGPT originale: la pagina di chatgpt.com è protetta da una verifica anti-bot.
 - Progetto non ufficiale, non affiliato a Vento o Wave by Vento.
 
 ## Struttura
@@ -106,11 +115,11 @@ Su Vercel il connettore si aggiorna da solo a ogni push. Per il plugin aumenta `
 .claude-plugin/marketplace.json   marketplace (un plugin)
 plugins/wave-by-vento/            plugin: manifest, skill e riferimenti generati
 dist/wave-by-vento.plugin         plugin impacchettato da caricare o condividere
-data/                             dati dell'evento con fonti
-src/                              server MCP (strumenti, HTTP, stdio, dati live)
+data/                             info pratiche con fonti, snapshot dell'agenda, eventi extra
+src/                              server MCP (strumenti, agenda, HTTP, stdio, dati live)
 api/                              funzioni Vercel (/mcp, /health)
 public/index.html                 pagina di presentazione del connettore
-scripts/                          build del plugin
+scripts/                          sync dell'agenda e build del plugin
 test/                             test (node --test)
 ```
 
@@ -118,9 +127,9 @@ test/                             test (node --test)
 
 ## English summary
 
-Unofficial Claude version of the Wave by Vento 2026 ChatGPT plugin (OGR Torino, 7-9 October 2026). It ships a **Claude plugin** (a skill with verified, sourced event data; works in chat, Cowork and Claude Code without any server) and a **remote MCP connector** (live data from the official website and the Luma side-events calendar) that deploys to Vercel as-is.
+Unofficial Claude version of the Wave by Vento 2026 ChatGPT plugin (OGR Torino, 7-9 October 2026). It ships a **Claude plugin** (a skill with the full official program by day, all speakers and practical info checked against the official website; works in chat, Cowork and Claude Code without any server) and a **remote MCP connector** (live official agenda, Luma side events and official pages, with a saved snapshot as fallback) that deploys to Vercel as-is.
 
 - Install the plugin: Customize → Plugins → Add → Add marketplace → `andreagay/wave_vento_connector`, or upload `dist/wave-by-vento.plugin`. Claude Code: `/plugin marketplace add andreagay/wave_vento_connector`.
 - Deploy the connector: import the repo at [vercel.com/new](https://vercel.com/new); the endpoint is `https://<project>.vercel.app/mcp` and the root page explains how to add it (Customize → Connectors → + → Add custom connector, available on every plan).
 - Wire the connector into the plugin: `npm run build:plugin -- --mcp-url https://<project>.vercel.app/mcp`.
-- Edit data in `data/*.json`, then `npm run build:plugin && npm test`.
+- Refresh the agenda snapshot with `npm run sync:agenda`, edit practical info in `data/event.json`, then `npm run build:plugin && npm test` (`npm run test:live` checks the real services).
